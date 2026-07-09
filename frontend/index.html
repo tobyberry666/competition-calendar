@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学生竞赛日历 - 全网竞赛信息一站直达</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🎯 大学生竞赛日历</h1>
+            <p class="subtitle">全网竞赛信息一站直达 · 每天早7点自动更新</p>
+            <p class="update-time" id="updateTime">数据加载中...</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 统计卡片 -->
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalCount">0</span>
+                <span class="stat-label">竞赛总数</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="categoryCount">0</span>
+                <span class="stat-label">覆盖分类</span>
+            </div>
+        </div>
+
+        <!-- 视图切换 -->
+        <div class="view-toggle">
+            <button class="view-btn active" data-view="list">📋 列表视图</button>
+            <button class="view-btn" data-view="calendar">📅 日历视图</button>
+        </div>
+
+        <!-- 筛选栏 -->
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label>分类筛选：</label>
+                <div class="category-buttons" id="categoryButtons">
+                    <button class="cat-btn active" data-category="all">全部</button>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索竞赛名称...">
+            </div>
+        </div>
+
+        <!-- 竞赛列表 -->
+        <div class="competition-list" id="competitionList">
+            <div class="loading">加载中...</div>
+        </div>
+
+        <!-- 日历视图 -->
+        <div class="calendar-view" id="calendarView" style="display: none;">
+            <div class="calendar-header">
+                <button class="cal-nav-btn" id="prevMonth">◀</button>
+                <h3 id="currentMonthTitle">2026年7月</h3>
+                <button class="cal-nav-btn" id="nextMonth">▶</button>
+            </div>
+            <div class="calendar-weekdays">
+                <span>周一</span><span>周二</span><span>周三</span><span>周四</span>
+                <span>周五</span><span>周六</span><span>周日</span>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>数据来源：赛氪网、ICPC官网、Hackalist · 每日自动更新</p>
+            <p class="small">开源项目 · 仅供学习参考，报名请以官方信息为准</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
