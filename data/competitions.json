@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10 00:02:14",
+  "updated_at": "2026-07-10 06:05:05",
   "total": 18,
   "categories": {
     "创新创业类": 3,
@@ -25,7 +25,7 @@
       "location": "全国",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "挑战杯全国大学生课外学术科技作品竞赛",
@@ -40,7 +40,7 @@
       "location": "全国",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "挑战杯中国大学生创业计划竞赛",
@@ -55,7 +55,7 @@
       "location": "全国",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "ICPC国际大学生程序设计竞赛亚洲区域赛",
@@ -70,7 +70,7 @@
       "location": "全国多赛站",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "中国大学生计算机设计大赛",
@@ -85,7 +85,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "蓝桥杯全国软件和信息技术专业人才大赛",
@@ -100,7 +100,7 @@
       "location": "全国各赛区",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生信息安全竞赛",
@@ -115,7 +115,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生数学建模竞赛",
@@ -130,7 +130,7 @@
       "location": "各高校",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生数学竞赛",
@@ -145,7 +145,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生电子设计竞赛",
@@ -160,7 +160,7 @@
       "location": "全国各赛区",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生光电设计竞赛",
@@ -175,7 +175,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "西门子杯中国智能制造挑战赛",
@@ -190,7 +190,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生机械创新设计大赛",
@@ -205,7 +205,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生工程训练综合能力竞赛",
@@ -220,7 +220,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生英语竞赛",
@@ -235,7 +235,7 @@
       "location": "各高校",
       "gold_weight": 3,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生化工设计竞赛",
@@ -250,7 +250,7 @@
       "location": "全国",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生市场调查与分析大赛",
@@ -265,7 +265,7 @@
       "location": "全国",
       "gold_weight": 3,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     },
     {
       "title": "全国大学生电子商务创新创意及创业挑战赛",
@@ -280,7 +280,7 @@
       "location": "全国",
       "gold_weight": 3,
       "official": true,
-      "fetched_at": "2026-07-10 00:02:03"
+      "fetched_at": "2026-07-10 06:04:46"
     }
   ]
 }
