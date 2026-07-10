@@ -3,6 +3,8 @@ from .icpc import crawl_icpc_regional
 from .hackalist import crawl_hackathons
 from .jingsai52 import crawl_all as crawl_52jingsai
 from .jingrace import crawl_jingrace
+from .dorahacks import crawl_dorahacks
+from .devpost import crawl_devpost
 from .seed_data import get_seed_competitions
 
 __all__ = [
@@ -11,5 +13,7 @@ __all__ = [
     "crawl_hackathons",
     "crawl_52jingsai",
     "crawl_jingrace",
+    "crawl_dorahacks",
+    "crawl_devpost",
     "get_seed_competitions",
 ]
