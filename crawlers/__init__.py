@@ -6,6 +6,7 @@ from .jingrace import crawl_jingrace
 from .dorahacks import crawl_dorahacks
 from .devpost import crawl_devpost
 from .seed_data import get_seed_competitions
+from .url_validator import validate_and_discover_urls
 
 __all__ = [
     "crawl_saikr",
@@ -16,4 +17,5 @@ __all__ = [
     "crawl_dorahacks",
     "crawl_devpost",
     "get_seed_competitions",
+    "validate_and_discover_urls",
 ]

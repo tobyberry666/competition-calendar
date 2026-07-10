@@ -21,6 +21,7 @@ from crawlers import (
     crawl_devpost,
     get_seed_competitions,
 )
+from crawlers.url_validator import validate_and_discover_urls
 
 
 def merge_and_deduplicate(all_lists):
@@ -161,6 +162,15 @@ def main():
 
     # 合并去重
     merged = merge_and_deduplicate(all_data)
+
+    # URL 验证与自动发现
+    print("\n[URL] 正在验证官网链接...")
+    try:
+        merged, url_stats = validate_and_discover_urls(merged)
+        print(f"[URL] 验证完成: {url_stats['ok']} 正常, {url_stats['fixed']} 修复, {url_stats['failed']} 失败")
+    except Exception as e:
+        print(f"[URL] 验证异常: {e}")
+
     sorted_list = sort_by_deadline(merged)
     categories = count_categories(sorted_list)
 
