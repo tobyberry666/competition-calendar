@@ -21,6 +21,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 5,
             "official": True
         },
@@ -35,6 +36,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 5,
             "official": True
         },
@@ -49,6 +51,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 5,
             "official": True
         },
@@ -64,7 +67,8 @@ def get_seed_competitions():
             "raw_time": "每年9-12月",
             "registration_deadline": None,
             "contest_start": None,
-            "location": "全国多赛站",
+            "location": "全国多赛站（北京/上海/广州/成都等）",
+            "region": "regional",
             "gold_weight": 5,
             "official": True
         },
@@ -79,6 +83,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -93,6 +98,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国各赛区",
+            "region": "regional",
             "gold_weight": 4,
             "official": True
         },
@@ -107,6 +113,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -123,6 +130,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "各高校",
+            "region": "regional",
             "gold_weight": 5,
             "official": True
         },
@@ -136,7 +144,8 @@ def get_seed_competitions():
             "raw_time": "每年10月底初赛，次年3月决赛",
             "registration_deadline": None,
             "contest_start": None,
-            "location": "全国",
+            "location": "各高校",
+            "region": "regional",
             "gold_weight": 4,
             "official": True
         },
@@ -153,6 +162,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国各赛区",
+            "region": "regional",
             "gold_weight": 5,
             "official": True
         },
@@ -167,6 +177,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -181,6 +192,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -197,6 +209,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -211,6 +224,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -227,6 +241,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "各高校",
+            "region": "regional",
             "gold_weight": 3,
             "official": True
         },
@@ -243,6 +258,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 4,
             "official": True
         },
@@ -259,6 +275,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 3,
             "official": True
         },
@@ -273,6 +290,7 @@ def get_seed_competitions():
             "registration_deadline": None,
             "contest_start": None,
             "location": "全国",
+            "region": "national",
             "gold_weight": 3,
             "official": True
         },
