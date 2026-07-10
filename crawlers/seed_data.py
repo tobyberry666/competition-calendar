@@ -108,7 +108,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "教育部高校计算机类专业教学指导委员会主办",
-            "officialUrl": "https://2024.jsjds.com.cn",
+            "officialUrl": "https://jsjds.blcu.edu.cn/",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -156,7 +156,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "国内信息安全领域顶级大学生竞赛",
-            "officialUrl": "https://www.ciscn.cn",
+            "officialUrl": "http://www.ciscn.cn",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -228,7 +228,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "教育部高等教育司主办，两年一届，奇数年举办",
-            "officialUrl": "https://www.nuedc-training.com.cn",
+            "officialUrl": "http://www.nuedc.com.cn",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -252,7 +252,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "中国光学学会主办，光电领域最高水平大学生竞赛",
-            "officialUrl": "http://www.opticscompetition.cn",
+            "officialUrl": "https://www.optics.sjtu.edu.cn/",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -276,7 +276,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "西门子与教育部合作举办的工业自动化竞赛",
-            "officialUrl": "https://www.siemenscup-cimc.cn",
+            "officialUrl": "https://www.siemens.com.cn/",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -300,7 +300,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "教育部机械基础课程教学指导委员会主办",
-            "officialUrl": "http://www.mi.ustb.edu.cn",
+            "officialUrl": "https://www.mechinnovation.cn/",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -372,7 +372,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "中国化工学会化学工程专业委员会主办",
-            "officialUrl": "http://www.cacic.cn",
+            "officialUrl": "https://chemyjs.com/",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
@@ -396,7 +396,7 @@ def get_seed_competitions():
                 "resultDate": None
             },
             "description": "中国商业统计学会主办",
-            "officialUrl": "http://www.china-stat.com",
+            "officialUrl": "https://www.chinastatistics.org/",
             "source": "教育部白名单",
             "sourceVerified": True,
             "lastUpdated": now,
