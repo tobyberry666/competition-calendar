@@ -5,6 +5,8 @@ Hackalist API - 全球黑客松数据源
 import requests
 from datetime import datetime
 
+from retry import retry_get
+
 API_URL = "https://hackalist.org/api/events"
 
 
@@ -13,7 +15,7 @@ def crawl_hackathons():
     competitions = []
 
     try:
-        resp = requests.get(API_URL, timeout=15)
+        resp = retry_get(API_URL, timeout=15)
         data = resp.json()
 
         for event in data:

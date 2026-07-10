@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 import re
 from datetime import datetime
 
+from retry import retry_get
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
@@ -18,7 +20,7 @@ def crawl_icpc_regional():
     competitions = []
 
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=10)
+        resp = retry_get(url, headers=HEADERS, timeout=10)
         resp.encoding = "utf-8"
         soup = BeautifulSoup(resp.text, "html.parser")
 

@@ -9,6 +9,7 @@ import time
 from datetime import datetime
 
 from categories import guess_category
+from retry import retry_get
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -36,7 +37,7 @@ def crawl_saikr_hot(page=1):
     competitions = []
 
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=10)
+        resp = retry_get(url, headers=HEADERS, timeout=10)
         resp.encoding = "utf-8"
         soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -94,7 +95,7 @@ def crawl_saikr_hot(page=1):
 def crawl_saikr_detail(competition_url):
     """爬取竞赛详情页，获取更精确的报名截止时间、地点等"""
     try:
-        resp = requests.get(competition_url, headers=HEADERS, timeout=10)
+        resp = retry_get(competition_url, headers=HEADERS, timeout=10)
         resp.encoding = "utf-8"
         soup = BeautifulSoup(resp.text, "html.parser")
 
