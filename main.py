@@ -2,6 +2,7 @@
 竞赛信息聚合 - 主入口
 调度所有爬虫，合并数据，输出统一 JSON
 """
+import glob
 import json
 import os
 import sys
@@ -51,6 +52,27 @@ def count_categories(competitions):
         cat = comp.get("category", "其他")
         categories[cat] = categories.get(cat, 0) + 1
     return categories
+
+
+def cleanup_old_backups(data_dir, keep_days=30):
+    """清理超过 keep_days 天的旧备份文件"""
+    pattern = os.path.join(data_dir, "competitions-????-??-??.json")
+    files = glob.glob(pattern)
+    cutoff = datetime.now().timestamp() - keep_days * 86400
+    deleted = 0
+
+    for fpath in files:
+        fname = os.path.basename(fpath)
+        try:
+            date_str = fname.replace("competitions-", "").replace(".json", "")
+            file_date = datetime.strptime(date_str, "%Y-%m-%d")
+            if file_date.timestamp() < cutoff:
+                os.remove(fpath)
+                deleted += 1
+        except (ValueError, OSError):
+            continue
+
+    return deleted
 
 
 def main():
@@ -144,6 +166,15 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # 写入带时间戳的备份
+    backup_date = datetime.now().strftime("%Y-%m-%d")
+    backup_path = os.path.join(data_dir, f"competitions-{backup_date}.json")
+    with open(backup_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    # 清理旧备份
+    deleted = cleanup_old_backups(data_dir)
+
     # 同时复制一份到 frontend 目录，供前端直接读取
     frontend_data = os.path.join(os.path.dirname(__file__), "frontend", "data.json")
     with open(frontend_data, "w", encoding="utf-8") as f:
@@ -155,6 +186,9 @@ def main():
     for cat, count in sorted(categories.items(), key=lambda x: -x[1]):
         print(f"   - {cat}: {count} 条")
     print(f"\n💾 数据已保存到: {output_path}")
+    print(f"📦 每日备份: {backup_path}")
+    if deleted:
+        print(f"🗑️  已清理 {deleted} 个超过 30 天的旧备份")
     print("=" * 60)
 
 
