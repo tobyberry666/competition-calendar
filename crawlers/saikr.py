@@ -148,6 +148,24 @@ def crawl_all(max_pages=3):
             unique.append(comp)
 
     print(f"[赛氪] 共爬取 {len(unique)} 条唯一竞赛")
+
+    # 抓取详情页（限制前30条）
+    detail_limit = min(30, len(unique))
+    for i in range(detail_limit):
+        comp = unique[i]
+        url = comp.get("url")
+        if not url:
+            continue
+        print(f"[赛氪] 正在获取详情 ({i+1}/{detail_limit})...")
+        detail = crawl_saikr_detail(url)
+        if detail:
+            if detail.get("registration_deadline"):
+                comp["registration_deadline"] = detail["registration_deadline"]
+            if detail.get("contest_start"):
+                comp["contest_start"] = detail["contest_start"]
+            if detail.get("location"):
+                comp["location"] = detail["location"]
+
     return unique
 
 
