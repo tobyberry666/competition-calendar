@@ -1,6 +1,7 @@
 // 竞赛日历前端逻辑
 let allCompetitions = [];
 let currentCategory = 'all';
+let currentLocation = 'all';
 let searchKeyword = '';
 let currentView = 'list';
 let currentCalendarDate = new Date();
@@ -63,6 +64,12 @@ function initEventListeners() {
         renderCurrentView();
     });
 
+    // 地区筛选
+    document.getElementById('locationFilter').addEventListener('change', (e) => {
+        currentLocation = e.target.value;
+        renderCurrentView();
+    });
+
     // 视图切换
     document.querySelectorAll('.view-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -100,6 +107,17 @@ function getFilteredList() {
         // 关键词搜索
         if (searchKeyword && !comp.title.toLowerCase().includes(searchKeyword)) {
             return false;
+        }
+        // 地区过滤
+        if (currentLocation !== 'all') {
+            const loc = (comp.location || '').toLowerCase();
+            if (currentLocation === '全国') {
+                if (!loc.includes('全国') && loc !== '') return false;
+            } else if (currentLocation === '线上') {
+                if (!loc.includes('线上') && !loc.includes('远程') && !loc.includes('online')) return false;
+            } else {
+                if (!loc.includes(currentLocation.toLowerCase())) return false;
+            }
         }
         return true;
     });
