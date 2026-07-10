@@ -10,6 +10,8 @@ from datetime import datetime
 
 from .categories import guess_category
 from .retry import retry_get
+from .seed_data import make_id
+from .saikr import guess_difficulty, guess_subcategory
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -64,18 +66,32 @@ def crawl_jingrace():
                 # 提取所有文本
                 all_text = item.get_text(" ", strip=True)
 
+                comp_id = make_id(title)
+                subcats = guess_subcategory(title)
+
                 competition = {
-                    "title": title,
-                    "url": link if link else "https://www.jingrace.com/",
+                    "id": comp_id,
+                    "name": title,
                     "category": guess_category(title),
-                    "source": "竞观Compass",
+                    "subcategory": subcats,
+                    "organizer": "",
+                    "location": {"province": "", "city": "", "display": ""},
+                    "timeline": {
+                        "registrationStart": None,
+                        "registrationDeadline": None,
+                        "submissionDeadline": None,
+                        "competitionDate": None,
+                        "resultDate": None
+                    },
                     "description": all_text[:200] if all_text else "",
-                    "status": "敬请关注",
-                    "raw_time": "",
-                    "registration_deadline": None,
-                    "contest_start": None,
-                    "location": None,
-                    "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    "officialUrl": link if link else "https://www.jingrace.com/",
+                    "source": "竞观Compass",
+                    "sourceVerified": False,
+                    "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
+                    "difficulty": guess_difficulty(title),
+                    "prize": "",
+                    "region": "",
+                    "status": "敬请关注"
                 }
                 competitions.append(competition)
             except Exception:
@@ -93,4 +109,4 @@ def crawl_jingrace():
 if __name__ == "__main__":
     data = crawl_jingrace()
     for item in data[:5]:
-        print(item["title"])
+        print(item["name"])

@@ -6,6 +6,8 @@ import requests
 from datetime import datetime
 
 from .retry import retry_get
+from .seed_data import make_id
+from .saikr import guess_difficulty
 
 API_URL = "https://hackalist.org/api/events"
 
@@ -19,18 +21,34 @@ def crawl_hackathons():
         data = resp.json()
 
         for event in data:
+            title = event.get("title", "")
+            comp_id = make_id(title)
+            start_date = event.get("startDate", "")
+            end_date = event.get("endDate", "")
+
             competitions.append({
-                "title": event.get("title", ""),
-                "url": event.get("url", ""),
+                "id": comp_id,
+                "name": title,
                 "category": "计算机类",
-                "source": "Hackalist",
+                "subcategory": ["黑客松"],
+                "organizer": "",
+                "location": {"province": "", "city": "", "display": event.get("location", "")},
+                "timeline": {
+                    "registrationStart": None,
+                    "registrationDeadline": None,
+                    "submissionDeadline": None,
+                    "competitionDate": start_date if start_date else None,
+                    "resultDate": end_date if end_date else None
+                },
                 "description": event.get("description", ""),
-                "status": "报名中" if event.get("isAccepting", False) else "未开始",
-                "raw_time": f"{event.get('startDate', '')} - {event.get('endDate', '')}",
-                "registration_deadline": None,
-                "contest_start": event.get("startDate", ""),
-                "location": event.get("location", ""),
-                "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                "officialUrl": event.get("url", ""),
+                "source": "Hackalist",
+                "sourceVerified": False,
+                "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
+                "difficulty": guess_difficulty(title),
+                "prize": "",
+                "region": "",
+                "status": "报名中" if event.get("isAccepting", False) else "未开始"
             })
 
         print(f"[Hackalist] 获取到 {len(competitions)} 条黑客松")
@@ -44,4 +62,4 @@ def crawl_hackathons():
 if __name__ == "__main__":
     data = crawl_hackathons()
     for item in data[:5]:
-        print(item["title"], "-", item["location"])
+        print(item["name"], "-", item["location"]["display"])

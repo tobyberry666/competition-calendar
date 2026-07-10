@@ -11,6 +11,7 @@ from datetime import datetime
 
 from .categories import guess_category
 from .retry import retry_get
+from .seed_data import make_id
 
 # 常见中国城市名（用于从标题/描述中提取地点）
 COMMON_CITIES = [
@@ -23,10 +24,55 @@ COMMON_CITIES = [
     "芜湖", "洛阳", "开封", "咸阳", "宝鸡", "遵义", "桂林", "绵阳",
 ]
 
+# 子分类映射：根据竞赛标题关键词确定 subcategory
+CATEGORY_SUBCAT_MAP = {
+    "ICPC": ["ICPC", "XCPC"],
+    "CCPC": ["CCPC", "XCPC"],
+    "蓝桥杯": ["蓝桥杯"],
+    "天梯赛": ["天梯赛"],
+    "数学建模": ["数学建模"],
+    "信息安全": ["信息安全"],
+    "电子设计": ["电子设计"],
+    "光电": ["光电"],
+    "机械": ["机械"],
+    "机器人": ["机器人"],
+    "互联网+": ["互联网+"],
+    "挑战杯": ["挑战杯"],
+    "创新创业": ["创新创业"],
+    "计算机设计": ["计算机"],
+    "英语": ["英语"],
+    "翻译": ["翻译"],
+    "化工": ["化工"],
+    "市场调查": ["市场调查"],
+    "电子商务": ["电子商务"],
+    "CSP": ["CSP"],
+    "数据挖掘": ["数据挖掘"],
+    "人工智能": ["人工智能"],
+    "智能制造": ["智能制造"],
+    "商业": ["商业"],
+}
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "zh-CN,zh;q=0.9"
 }
+
+
+def guess_difficulty(title):
+    """根据标题猜测竞赛难度"""
+    if "ICPC" in title or "CCPC" in title:
+        return "Advanced"
+    if "蓝桥杯" in title or "天梯赛" in title:
+        return "Beginner"
+    return "Intermediate"
+
+
+def guess_subcategory(title):
+    """根据标题关键词确定 subcategory"""
+    for kw, subcats in CATEGORY_SUBCAT_MAP.items():
+        if kw in title:
+            return subcats
+    return []
 
 
 def parse_date(date_str):
@@ -132,29 +178,45 @@ def crawl_saikr_hot(page=1):
                 desc_elem = item.select_one(".desc")
                 desc = desc_elem.get_text(strip=True) if desc_elem else ""
 
-                competition = {
-                    "title": title,
-                    "url": link,
-                    "category": guess_category(title),
-                    "source": "赛氪",
-                    "description": desc,
-                    "status": status,
-                    "raw_time": time_text,
-                    "registration_deadline": None,
-                    "contest_start": None,
-                    "location": None,
-                    "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-
                 # 从 raw_time 和 desc 中提取日期
+                reg_deadline = None
+                comp_date = None
                 for field in [time_text, desc]:
                     date_found = parse_date_from_text(field)
                     if date_found:
-                        if not competition["registration_deadline"]:
-                            competition["registration_deadline"] = date_found
+                        if not reg_deadline:
+                            reg_deadline = date_found
                         else:
-                            competition["contest_start"] = date_found
+                            comp_date = date_found
                             break
+
+                subcats = guess_subcategory(title)
+                comp_id = make_id(title)
+
+                competition = {
+                    "id": comp_id,
+                    "name": title,
+                    "category": guess_category(title),
+                    "subcategory": subcats,
+                    "organizer": "",
+                    "location": {"province": "", "city": "", "display": ""},
+                    "timeline": {
+                        "registrationStart": None,
+                        "registrationDeadline": reg_deadline,
+                        "submissionDeadline": None,
+                        "competitionDate": comp_date,
+                        "resultDate": None
+                    },
+                    "description": desc,
+                    "officialUrl": link,
+                    "source": "赛氪",
+                    "sourceVerified": False,
+                    "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
+                    "difficulty": guess_difficulty(title),
+                    "prize": "",
+                    "region": "",
+                    "status": status
+                }
 
                 competitions.append(competition)
             except Exception as e:
@@ -186,13 +248,13 @@ def crawl_saikr_detail(competition_url):
         if deadline_elem:
             parent = deadline_elem.find_parent()
             if parent:
-                detail["registration_deadline"] = parse_date(parent.get_text(strip=True))
+                detail["registrationDeadline"] = parse_date(parent.get_text(strip=True))
 
         # 方式2：用正则在全文中找"截止"附近的日期
-        if not detail.get("registration_deadline"):
+        if not detail.get("registrationDeadline"):
             m = re.search(r'报名.{0,10}截止.{0,30}', full_text)
             if m:
-                detail["registration_deadline"] = parse_date_from_text(m.group(0))
+                detail["registrationDeadline"] = parse_date_from_text(m.group(0))
 
         # --- 提取比赛时间 ---
         # 方式1：在标签附近找日期
@@ -200,16 +262,16 @@ def crawl_saikr_detail(competition_url):
         if contest_time_elem:
             parent = contest_time_elem.find_parent()
             if parent:
-                detail["contest_start"] = parse_date(parent.get_text(strip=True))
+                detail["competitionDate"] = parse_date(parent.get_text(strip=True))
 
         # 方式2：用正则在全文中找"开始"/"比赛"附近的日期
-        if not detail.get("contest_start"):
+        if not detail.get("competitionDate"):
             for keyword in ["开始", "比赛", "竞赛", "开赛"]:
                 m = re.search(rf'{keyword}.{{0,30}}', full_text)
                 if m:
                     date_found = parse_date_from_text(m.group(0))
                     if date_found:
-                        detail["contest_start"] = date_found
+                        detail["competitionDate"] = date_found
                         break
 
         # --- 提取举办地点 ---
@@ -268,8 +330,8 @@ def crawl_all(max_pages=3):
     seen = set()
     unique = []
     for comp in all_competitions:
-        if comp["title"] not in seen:
-            seen.add(comp["title"])
+        if comp["name"] not in seen:
+            seen.add(comp["name"])
             unique.append(comp)
 
     print(f"[赛氪] 共爬取 {len(unique)} 条唯一竞赛")
@@ -278,18 +340,18 @@ def crawl_all(max_pages=3):
     detail_limit = min(30, len(unique))
     for i in range(detail_limit):
         comp = unique[i]
-        url = comp.get("url")
+        url = comp.get("officialUrl")
         if not url:
             continue
         print(f"[赛氪] 正在获取详情 ({i+1}/{detail_limit})...")
         detail = crawl_saikr_detail(url)
         if detail:
-            if detail.get("registration_deadline"):
-                comp["registration_deadline"] = detail["registration_deadline"]
-            if detail.get("contest_start"):
-                comp["contest_start"] = detail["contest_start"]
+            if detail.get("registrationDeadline"):
+                comp["timeline"]["registrationDeadline"] = detail["registrationDeadline"]
+            if detail.get("competitionDate"):
+                comp["timeline"]["competitionDate"] = detail["competitionDate"]
             if detail.get("location"):
-                comp["location"] = detail["location"]
+                comp["location"]["display"] = detail["location"]
 
     return unique
 

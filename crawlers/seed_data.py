@@ -6,300 +6,430 @@
 from datetime import datetime
 
 
+def make_id(name):
+    """从竞赛名称生成 slug ID"""
+    import re
+    slug = name.lower()
+    slug = re.sub(r'[^a-z0-9\u4e00-\u9fff-]+', '-', slug)
+    slug = re.sub(r'-+', '-', slug).strip('-')
+    if not slug:
+        slug = datetime.now().strftime("%Y%m%d%H%M%S")
+    return slug
+
+
 def get_seed_competitions():
     """获取种子竞赛数据"""
+    now = datetime.now().strftime("%Y-%m-%d")
     seed = [
-        # ========== 科技创新类 ==========
         {
-            "title": "中国国际大学生创新大赛（原互联网+）",
-            "url": "https://cy.ncss.cn",
+            "id": make_id("中国国际大学生创新大赛"),
+            "name": "中国国际大学生创新大赛",
             "category": "创新创业类",
-            "source": "教育部白名单",
+            "subcategory": ["互联网+"],
+            "organizer": "教育部",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-06-30",
+                "submissionDeadline": None,
+                "competitionDate": "2026-10-15",
+                "resultDate": None
+            },
             "description": "教育部主办，国内规模最大、认可度最高的大学生创新创业大赛",
-            "status": "已截止",
-            "raw_time": "每年4-10月",
-            "registration_deadline": "2026-06-30",
-            "contest_start": "2026-10-15",
-            "location": "全国",
+            "officialUrl": "https://cy.ncss.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Advanced",
+            "prize": "",
             "region": "national",
-            "gold_weight": 5,
-            "official": True
+            "status": "已截止"
         },
         {
-            "title": "挑战杯全国大学生课外学术科技作品竞赛",
-            "url": "http://www.tiaozhanbei.net",
+            "id": make_id("挑战杯课外学术科技作品竞赛"),
+            "name": "挑战杯课外学术科技作品竞赛",
             "category": "创新创业类",
-            "source": "教育部白名单",
+            "subcategory": ["挑战杯"],
+            "organizer": "共青团中央",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-05-15",
+                "submissionDeadline": None,
+                "competitionDate": "2026-11-01",
+                "resultDate": None
+            },
             "description": "共青团中央主办，大挑，两年一届，奇数年举办",
-            "status": "已截止",
-            "raw_time": "奇数年3-11月",
-            "registration_deadline": "2026-05-15",
-            "contest_start": "2026-11-01",
-            "location": "全国",
-            "region": "national",
-            "gold_weight": 5,
-            "official": True
-        },
-        {
-            "title": "挑战杯中国大学生创业计划竞赛",
-            "url": "http://www.tiaozhanbei.net",
-            "category": "创新创业类",
+            "officialUrl": "http://www.tiaozhanbei.net",
             "source": "教育部白名单",
-            "description": "小挑，两年一届，偶数年举办",
-            "status": "偶数年举办",
-            "raw_time": "偶数年3-11月",
-            "registration_deadline": None,
-            "contest_start": None,
-            "location": "全国",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Advanced",
+            "prize": "",
             "region": "national",
-            "gold_weight": 5,
-            "official": True
+            "status": "已截止"
         },
-
-        # ========== 计算机类 ==========
         {
-            "title": "ICPC国际大学生程序设计竞赛亚洲区域赛",
-            "url": "https://icpc.pku.edu.cn",
+            "id": make_id("ICPC亚洲区域赛"),
+            "name": "ICPC亚洲区域赛",
             "category": "计算机类",
-            "source": "教育部白名单",
+            "subcategory": ["ICPC", "XCPC"],
+            "organizer": "ICPC北京总部",
+            "location": {"province": "", "city": "", "display": "全国多赛站"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-09-30",
+                "submissionDeadline": None,
+                "competitionDate": "2026-11-15",
+                "resultDate": None
+            },
             "description": "国际顶级算法竞赛，ACM/ICPC亚洲区预选赛",
-            "status": "报名中",
-            "raw_time": "每年9-12月",
-            "registration_deadline": "2026-09-30",
-            "contest_start": "2026-11-15",
-            "location": "全国多赛站（北京/上海/广州/成都等）",
+            "officialUrl": "https://icpc.pku.edu.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Advanced",
+            "prize": "",
             "region": "regional",
-            "gold_weight": 5,
-            "official": True
+            "status": "报名中"
         },
         {
-            "title": "中国大学生计算机设计大赛",
-            "url": "https://2024.jsjds.com.cn",
+            "id": make_id("中国大学生计算机设计大赛"),
+            "name": "中国大学生计算机设计大赛",
             "category": "计算机类",
-            "source": "教育部白名单",
+            "subcategory": ["计算机"],
+            "organizer": "教育部计算机教指委",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-04-30",
+                "submissionDeadline": None,
+                "competitionDate": "2026-08-01",
+                "resultDate": None
+            },
             "description": "教育部高校计算机类专业教学指导委员会主办",
-            "status": "已截止",
-            "raw_time": "每年3-8月",
-            "registration_deadline": "2026-04-30",
-            "contest_start": "2026-08-01",
-            "location": "全国",
+            "officialUrl": "https://2024.jsjds.com.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
             "region": "national",
-            "gold_weight": 4,
-            "official": True
+            "status": "已截止"
         },
         {
-            "title": "蓝桥杯全国软件和信息技术专业人才大赛",
-            "url": "https://dasai.lanqiao.cn",
+            "id": make_id("蓝桥杯软件和信息技术专业人才大赛"),
+            "name": "蓝桥杯软件和信息技术专业人才大赛",
             "category": "计算机类",
-            "source": "教育部白名单",
+            "subcategory": ["蓝桥杯"],
+            "organizer": "工信部人才交流中心",
+            "location": {"province": "", "city": "", "display": "全国各赛区"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-03-31",
+                "submissionDeadline": None,
+                "competitionDate": "2026-06-13",
+                "resultDate": None
+            },
             "description": "工业和信息化部人才交流中心主办，参赛人数最多的IT类竞赛",
-            "status": "已截止",
-            "raw_time": "每年9月报名，次年4月省赛，6月决赛",
-            "registration_deadline": "2026-03-31",
-            "contest_start": "2026-06-13",
-            "location": "全国各赛区",
+            "officialUrl": "https://dasai.lanqiao.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Beginner",
+            "prize": "",
             "region": "regional",
-            "gold_weight": 4,
-            "official": True
+            "status": "已截止"
         },
         {
-            "title": "全国大学生信息安全竞赛",
-            "url": "https://www.ciscn.cn",
+            "id": make_id("全国大学生信息安全竞赛"),
+            "name": "全国大学生信息安全竞赛",
             "category": "计算机类",
-            "source": "教育部白名单",
+            "subcategory": ["信息安全"],
+            "organizer": "教育部",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-05-31",
+                "submissionDeadline": None,
+                "competitionDate": "2026-08-15",
+                "resultDate": None
+            },
             "description": "国内信息安全领域顶级大学生竞赛",
-            "status": "已截止",
-            "raw_time": "每年4-8月",
-            "registration_deadline": "2026-05-31",
-            "contest_start": "2026-08-15",
-            "location": "全国",
-            "region": "national",
-            "gold_weight": 4,
-            "official": True
-        },
-
-        # ========== 数学类 ==========
-        {
-            "title": "全国大学生数学建模竞赛",
-            "url": "http://www.mcm.edu.cn",
-            "category": "数学类",
+            "officialUrl": "https://www.ciscn.cn",
             "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Advanced",
+            "prize": "",
+            "region": "national",
+            "status": "已截止"
+        },
+        {
+            "id": make_id("全国大学生数学建模竞赛"),
+            "name": "全国大学生数学建模竞赛",
+            "category": "数学类",
+            "subcategory": ["数学建模"],
+            "organizer": "教育部",
+            "location": {"province": "", "city": "", "display": "各高校"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-09-01",
+                "submissionDeadline": None,
+                "competitionDate": "2026-09-11",
+                "resultDate": None
+            },
             "description": "全国高校规模最大的基础性学科竞赛",
-            "status": "报名中",
-            "raw_time": "每年9月中旬",
-            "registration_deadline": "2026-09-01",
-            "contest_start": "2026-09-11",
-            "location": "各高校",
+            "officialUrl": "http://www.mcm.edu.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
             "region": "regional",
-            "gold_weight": 5,
-            "official": True
+            "status": "报名中"
         },
         {
-            "title": "全国大学生数学竞赛",
-            "url": "http://www.cmathc.cn",
+            "id": make_id("全国大学生数学竞赛"),
+            "name": "全国大学生数学竞赛",
             "category": "数学类",
-            "source": "教育部白名单",
+            "subcategory": ["数学"],
+            "organizer": "中国数学会",
+            "location": {"province": "", "city": "", "display": "各高校"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-10-15",
+                "submissionDeadline": None,
+                "competitionDate": "2026-10-31",
+                "resultDate": None
+            },
             "description": "中国数学会主办，分数学专业组和非数学专业组",
-            "status": "即将开始",
-            "raw_time": "每年10月底初赛，次年3月决赛",
-            "registration_deadline": "2026-10-15",
-            "contest_start": "2026-10-31",
-            "location": "各高校",
-            "region": "regional",
-            "gold_weight": 4,
-            "official": True
-        },
-
-        # ========== 电子信息类 ==========
-        {
-            "title": "全国大学生电子设计竞赛",
-            "url": "https://www.nuedc-training.com.cn",
-            "category": "电子信息类",
+            "officialUrl": "http://www.cmathc.cn",
             "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Advanced",
+            "prize": "",
+            "region": "regional",
+            "status": "即将开始"
+        },
+        {
+            "id": make_id("全国大学生电子设计竞赛"),
+            "name": "全国大学生电子设计竞赛",
+            "category": "电子信息类",
+            "subcategory": ["电子设计"],
+            "organizer": "教育部",
+            "location": {"province": "", "city": "", "display": "全国各赛区"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": None,
+                "submissionDeadline": None,
+                "competitionDate": None,
+                "resultDate": None
+            },
             "description": "教育部高等教育司主办，两年一届，奇数年举办",
-            "status": "偶数年举办",
-            "raw_time": "奇数年8月",
-            "registration_deadline": None,
-            "contest_start": None,
-            "location": "全国各赛区",
+            "officialUrl": "https://www.nuedc-training.com.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Advanced",
+            "prize": "",
             "region": "regional",
-            "gold_weight": 5,
-            "official": True
+            "status": "偶数年"
         },
         {
-            "title": "全国大学生光电设计竞赛",
-            "url": "http://www.opticscompetition.cn",
+            "id": make_id("全国大学生光电设计竞赛"),
+            "name": "全国大学生光电设计竞赛",
             "category": "电子信息类",
-            "source": "教育部白名单",
+            "subcategory": ["光电"],
+            "organizer": "中国光学学会",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-05-31",
+                "submissionDeadline": None,
+                "competitionDate": "2026-07-20",
+                "resultDate": None
+            },
             "description": "中国光学学会主办，光电领域最高水平大学生竞赛",
-            "status": "已截止",
-            "raw_time": "每年5-8月",
-            "registration_deadline": "2026-05-31",
-            "contest_start": "2026-07-20",
-            "location": "全国",
+            "officialUrl": "http://www.opticscompetition.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
             "region": "national",
-            "gold_weight": 4,
-            "official": True
+            "status": "已截止"
         },
         {
-            "title": "西门子杯中国智能制造挑战赛",
-            "url": "https://www.siemenscup-cimc.cn",
+            "id": make_id("西门子杯中国智能制造挑战赛"),
+            "name": "西门子杯中国智能制造挑战赛",
             "category": "电子信息类",
-            "source": "教育部白名单",
+            "subcategory": ["智能制造"],
+            "organizer": "西门子+教育部",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-05-15",
+                "submissionDeadline": None,
+                "competitionDate": "2026-08-10",
+                "resultDate": None
+            },
             "description": "西门子与教育部合作举办的工业自动化竞赛",
-            "status": "已截止",
-            "raw_time": "每年3-8月",
-            "registration_deadline": "2026-05-15",
-            "contest_start": "2026-08-10",
-            "location": "全国",
-            "region": "national",
-            "gold_weight": 4,
-            "official": True
-        },
-
-        # ========== 机械类 ==========
-        {
-            "title": "全国大学生机械创新设计大赛",
-            "url": "http://www.mi.ustb.edu.cn",
-            "category": "机械类",
+            "officialUrl": "https://www.siemenscup-cimc.cn",
             "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
+            "region": "national",
+            "status": "已截止"
+        },
+        {
+            "id": make_id("全国大学生机械创新设计大赛"),
+            "name": "全国大学生机械创新设计大赛",
+            "category": "机械类",
+            "subcategory": ["机械"],
+            "organizer": "教育部机械教指委",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": None,
+                "submissionDeadline": None,
+                "competitionDate": None,
+                "resultDate": None
+            },
             "description": "教育部机械基础课程教学指导委员会主办",
-            "status": "偶数年举办",
-            "raw_time": "偶数年",
-            "registration_deadline": None,
-            "contest_start": None,
-            "location": "全国",
+            "officialUrl": "http://www.mi.ustb.edu.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
             "region": "national",
-            "gold_weight": 4,
-            "official": True
+            "status": "偶数年"
         },
         {
-            "title": "全国大学生工程训练综合能力竞赛",
-            "url": "http://www.gcxl.edu.cn",
+            "id": make_id("全国大学生工程训练综合能力竞赛"),
+            "name": "全国大学生工程训练综合能力竞赛",
             "category": "机械类",
-            "source": "教育部白名单",
+            "subcategory": ["工程训练"],
+            "organizer": "教育部",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": None,
+                "submissionDeadline": None,
+                "competitionDate": None,
+                "resultDate": None
+            },
             "description": "教育部高等教育司主办，工程实践类竞赛",
-            "status": "即将开始",
-            "raw_time": "奇数年",
-            "registration_deadline": None,
-            "contest_start": None,
-            "location": "全国",
+            "officialUrl": "http://www.gcxl.edu.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
             "region": "national",
-            "gold_weight": 4,
-            "official": True
+            "status": "奇数年"
         },
-
-        # ========== 外语类 ==========
         {
-            "title": "全国大学生英语竞赛",
-            "url": "https://www.chinaneccs.cn",
+            "id": make_id("全国大学生英语竞赛"),
+            "name": "全国大学生英语竞赛",
             "category": "外语类",
-            "source": "教育部白名单",
+            "subcategory": ["英语"],
+            "organizer": "中国外语教学研究会",
+            "location": {"province": "", "city": "", "display": "各高校"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-03-15",
+                "submissionDeadline": None,
+                "competitionDate": "2026-04-12",
+                "resultDate": None
+            },
             "description": "全国规模最大的大学生英语学科竞赛，分A/B/C/D类",
-            "status": "已截止",
-            "raw_time": "每年4月初赛，5月决赛",
-            "registration_deadline": "2026-03-15",
-            "contest_start": "2026-04-12",
-            "location": "各高校",
+            "officialUrl": "https://www.chinaneccs.cn",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Beginner",
+            "prize": "",
             "region": "regional",
-            "gold_weight": 3,
-            "official": True
+            "status": "已截止"
         },
-
-        # ========== 化工类 ==========
         {
-            "title": "全国大学生化工设计竞赛",
-            "url": "http://www.cacic.cn",
+            "id": make_id("全国大学生化工设计竞赛"),
+            "name": "全国大学生化工设计竞赛",
             "category": "化工类",
-            "source": "教育部白名单",
+            "subcategory": ["化工"],
+            "organizer": "中国化工学会",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-05-31",
+                "submissionDeadline": None,
+                "competitionDate": "2026-08-01",
+                "resultDate": None
+            },
             "description": "中国化工学会化学工程专业委员会主办",
-            "status": "已截止",
-            "raw_time": "每年5-8月",
-            "registration_deadline": "2026-05-31",
-            "contest_start": "2026-08-01",
-            "location": "全国",
-            "region": "national",
-            "gold_weight": 4,
-            "official": True
-        },
-
-        # ========== 商科类 ==========
-        {
-            "title": "全国大学生市场调查与分析大赛",
-            "url": "http://www.china-stat.com",
-            "category": "商科类",
+            "officialUrl": "http://www.cacic.cn",
             "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Intermediate",
+            "prize": "",
+            "region": "national",
+            "status": "已截止"
+        },
+        {
+            "id": make_id("全国大学生市场调查与分析大赛"),
+            "name": "全国大学生市场调查与分析大赛",
+            "category": "商科类",
+            "subcategory": ["市场调查"],
+            "organizer": "中国商业统计学会",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-03-31",
+                "submissionDeadline": None,
+                "competitionDate": "2026-05-25",
+                "resultDate": None
+            },
             "description": "中国商业统计学会主办",
-            "status": "已截止",
-            "raw_time": "每年11月-次年5月",
-            "registration_deadline": "2026-03-31",
-            "contest_start": "2026-05-25",
-            "location": "全国",
+            "officialUrl": "http://www.china-stat.com",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Beginner",
+            "prize": "",
             "region": "national",
-            "gold_weight": 3,
-            "official": True
+            "status": "已截止"
         },
         {
-            "title": "全国大学生电子商务创新创意及创业挑战赛",
-            "url": "http://www.3chuang.net",
+            "id": make_id("全国大学生电子商务三创赛"),
+            "name": "全国大学生电子商务三创赛",
             "category": "商科类",
-            "source": "教育部白名单",
+            "subcategory": ["电子商务"],
+            "organizer": "教育部电商教指委",
+            "location": {"province": "", "city": "", "display": "全国"},
+            "timeline": {
+                "registrationStart": None,
+                "registrationDeadline": "2026-03-31",
+                "submissionDeadline": None,
+                "competitionDate": "2026-07-15",
+                "resultDate": None
+            },
             "description": "教育部电子商务类专业教学指导委员会主办",
-            "status": "已截止",
-            "raw_time": "每年1-7月",
-            "registration_deadline": "2026-03-31",
-            "contest_start": "2026-07-15",
-            "location": "全国",
+            "officialUrl": "http://www.3chuang.net",
+            "source": "教育部白名单",
+            "sourceVerified": True,
+            "lastUpdated": now,
+            "difficulty": "Beginner",
+            "prize": "",
             "region": "national",
-            "gold_weight": 3,
-            "official": True
+            "status": "已截止"
         },
     ]
-
-    # 补充抓取时间戳
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    for comp in seed:
-        comp["fetched_at"] = now
 
     print(f"[种子数据] 加载 {len(seed)} 条教育部白名单竞赛")
     return seed

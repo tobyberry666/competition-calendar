@@ -9,6 +9,8 @@ from datetime import datetime
 
 from .categories import guess_category
 from .retry import retry_get
+from .seed_data import make_id
+from .saikr import guess_difficulty, guess_subcategory
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -63,18 +65,32 @@ def crawl_52jingsai(page=1):
                 desc_elem = item.select_one(".summery")
                 desc = desc_elem.get_text(strip=True) if desc_elem else ""
 
+                comp_id = make_id(title)
+                subcats = guess_subcategory(title)
+
                 competition = {
-                    "title": title,
-                    "url": link,
+                    "id": comp_id,
+                    "name": title,
                     "category": guess_category(title, [cat_text]),
-                    "source": "我爱竞赛网",
+                    "subcategory": subcats,
+                    "organizer": "",
+                    "location": {"province": "", "city": "", "display": ""},
+                    "timeline": {
+                        "registrationStart": None,
+                        "registrationDeadline": None,
+                        "submissionDeadline": None,
+                        "competitionDate": None,
+                        "resultDate": None
+                    },
                     "description": desc,
-                    "status": "报名中" if "报名" in title or "报名" in desc else "敬请关注",
-                    "raw_time": time_text,
-                    "registration_deadline": None,
-                    "contest_start": None,
-                    "location": None,
-                    "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    "officialUrl": link,
+                    "source": "我爱竞赛网",
+                    "sourceVerified": False,
+                    "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
+                    "difficulty": guess_difficulty(title),
+                    "prize": "",
+                    "region": "",
+                    "status": "报名中" if "报名" in title or "报名" in desc else "敬请关注"
                 }
                 competitions.append(competition)
             except Exception as e:
@@ -104,4 +120,4 @@ if __name__ == "__main__":
     data = crawl_all(2)
     print(f"共爬取 {len(data)} 条")
     for item in data[:3]:
-        print(item["title"])
+        print(item["name"])

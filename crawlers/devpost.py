@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from .categories import guess_category
 from .retry import retry_get
-from .saikr import parse_date_from_text
+from .saikr import parse_date_from_text, guess_difficulty, guess_subcategory
+from .seed_data import make_id
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
@@ -42,19 +43,32 @@ def crawl_devpost():
                     else:
                         start = parse_date_from_text(text)
 
+                comp_id = make_id(title)
+                subcats = guess_subcategory(title)
+
                 competitions.append({
-                    "title": title,
-                    "url": link,
+                    "id": comp_id,
+                    "name": title,
                     "category": guess_category(title),
-                    "source": "Devpost",
+                    "subcategory": subcats if subcats else ["黑客松"],
+                    "organizer": "",
+                    "location": {"province": "", "city": "", "display": "线上"},
+                    "timeline": {
+                        "registrationStart": None,
+                        "registrationDeadline": deadline,
+                        "submissionDeadline": None,
+                        "competitionDate": start,
+                        "resultDate": None
+                    },
                     "description": "",
-                    "status": "报名中",
-                    "raw_time": "",
-                    "registration_deadline": deadline,
-                    "contest_start": start,
-                    "location": "线上",
+                    "officialUrl": link,
+                    "source": "Devpost",
+                    "sourceVerified": False,
+                    "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
+                    "difficulty": guess_difficulty(title),
                     "prize": prize,
-                    "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    "region": "",
+                    "status": "报名中"
                 })
             except Exception:
                 continue

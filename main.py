@@ -30,7 +30,7 @@ def merge_and_deduplicate(all_lists):
 
     for comp_list in all_lists:
         for comp in comp_list:
-            key = comp["title"].strip()
+            key = comp["name"].strip()
             if key and key not in seen:
                 seen.add(key)
                 result.append(comp)
@@ -39,10 +39,12 @@ def merge_and_deduplicate(all_lists):
 
 
 def sort_by_deadline(competitions):
-    """按报名截止时间排序（有截止时间的排前面）"""
+    """按比赛时间或报名截止时间排序（有时间的排前面）"""
     def sort_key(item):
-        deadline = item.get("registration_deadline") or item.get("contest_start") or "9999-12-31"
-        return deadline
+        timeline = item.get("timeline", {})
+        comp_date = timeline.get("competitionDate") or "9999-12-31"
+        reg_deadline = timeline.get("registrationDeadline") or "9999-12-31"
+        return min(comp_date, reg_deadline)
 
     return sorted(competitions, key=sort_key)
 
@@ -163,7 +165,7 @@ def main():
     categories = count_categories(sorted_list)
 
     # 数据质量校验
-    valid_count = sum(1 for c in sorted_list if c.get("url"))
+    valid_count = sum(1 for c in sorted_list if c.get("officialUrl"))
     print(f"\n📊 数据质量校验：有效链接 {valid_count}/{len(sorted_list)}")
 
     if len(sorted_list) < 10:
@@ -197,6 +199,7 @@ def main():
 
     # 同时复制一份到 frontend 目录，供前端直接读取
     frontend_data = os.path.join(os.path.dirname(__file__), "frontend", "data.json")
+    os.makedirs(os.path.dirname(frontend_data), exist_ok=True)
     with open(frontend_data, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
