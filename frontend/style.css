@@ -256,6 +256,13 @@ body {
     font-weight: 500;
 }
 
+.card-prize {
+    font-size: 0.85rem;
+    color: #e67e22;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
 .card-desc {
     font-size: 0.85rem;
     color: #888;
@@ -525,4 +532,11 @@ body {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 2px;
+}
+
+.day-popup-item-prize {
+    font-size: 0.75rem;
+    color: #e67e22;
+    font-weight: 500;
+    margin-top: 4px;
 }

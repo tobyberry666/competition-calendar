@@ -183,6 +183,11 @@ function renderList() {
                     </span>
                 ` : ''}
             </div>
+            ${comp.prize ? `
+                <div class="card-prize">
+                    🏆 奖金：${escapeHtml(comp.prize)}
+                </div>
+            ` : ''}
             ${comp.description ? `<p class="card-desc">${escapeHtml(comp.description)}</p>` : ''}
             <div class="card-footer">
                 <span class="source-tag">来源：${escapeHtml(comp.source || '未知')}</span>
@@ -388,6 +393,12 @@ function renderDayPopup(year, month, day) {
             item.appendChild(link);
             item.appendChild(status);
             item.appendChild(meta);
+            if (comp.prize) {
+                const prize = document.createElement('div');
+                prize.className = 'day-popup-item-prize';
+                prize.textContent = `🏆 奖金：${comp.prize}`;
+                meta.appendChild(prize);
+            }
             popup.appendChild(item);
         });
     }
