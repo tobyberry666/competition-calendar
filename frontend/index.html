@@ -3,124 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大学生竞赛日历 - 全网竞赛信息一站直达</title>
-    <meta name="description" content="大学生竞赛日历 - 全网竞赛信息一站聚合，覆盖ICPC、互联网+、挑战杯、蓝桥杯等100+竞赛，每天自动更新。支持分类筛选、日历视图、关键词搜索。">
-    <meta name="keywords" content="大学生竞赛,竞赛日历,ICPC,互联网+,挑战杯,蓝桥杯,数学建模,创新创业,学科竞赛">
-    <meta property="og:title" content="大学生竞赛日历 - 全网竞赛信息一站直达">
-    <meta property="og:description" content="全网大学生竞赛信息一站聚合，每天早上7点自动更新，让想打竞赛的同学不用再到处找！">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
+    <title>XCPC Navigator</title>
+    <meta name="description" content="中国大学生程序设计竞赛导航 — ICPC、CCPC、蓝桥杯、数学建模等竞赛信息聚合">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>🎯 大学生竞赛日历</h1>
-            <p class="subtitle">全网竞赛信息一站直达 · 每天早7点自动更新</p>
-            <p class="update-time" id="updateTime">数据加载中...</p>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#/" class="nav-brand">
+                <span class="brand-icon">&lt;/&gt;</span>
+                <span class="brand-text">XCPC Navigator</span>
+            </a>
+            <div class="nav-links">
+                <a href="#/" class="nav-link" data-route="dashboard">Dashboard</a>
+                <a href="#/all" class="nav-link" data-route="all">全部竞赛</a>
+                <a href="#/favorites" class="nav-link" data-route="favorites">⭐ 我的赛季</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <!-- 统计卡片 -->
-        <div class="stats">
-            <div class="stat-card">
-                <span class="stat-number" id="totalCount">0</span>
-                <span class="stat-label">竞赛总数</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" id="categoryCount">0</span>
-                <span class="stat-label">覆盖分类</span>
-            </div>
-        </div>
-
-        <!-- 视图切换 -->
-        <div class="view-toggle">
-            <button class="view-btn active" data-view="list">📋 列表视图</button>
-            <button class="view-btn" data-view="calendar">📅 日历视图</button>
-        </div>
-
-        <!-- 筛选栏 -->
-        <div class="filter-bar">
-            <div class="filter-group">
-                <label>分类筛选：</label>
-                <div class="category-buttons" id="categoryButtons">
-                    <button class="cat-btn active" data-category="all">全部</button>
-                </div>
-            </div>
-            <div class="filter-group">
-                <label>地区筛选：</label>
-                <select id="locationFilter" class="location-select">
-                    <option value="all">全部地区</option>
-                    <option value="北京">北京</option>
-                    <option value="上海">上海</option>
-                    <option value="广州">广州</option>
-                    <option value="深圳">深圳</option>
-                    <option value="成都">成都</option>
-                    <option value="杭州">杭州</option>
-                    <option value="南京">南京</option>
-                    <option value="武汉">武汉</option>
-                    <option value="西安">西安</option>
-                    <option value="重庆">重庆</option>
-                    <option value="天津">天津</option>
-                    <option value="长沙">长沙</option>
-                    <option value="郑州">郑州</option>
-                    <option value="苏州">苏州</option>
-                    <option value="厦门">厦门</option>
-                    <option value="青岛">青岛</option>
-                    <option value="大连">大连</option>
-                    <option value="哈尔滨">哈尔滨</option>
-                    <option value="沈阳">沈阳</option>
-                    <option value="济南">济南</option>
-                    <option value="合肥">合肥</option>
-                    <option value="福州">福州</option>
-                    <option value="昆明">昆明</option>
-                    <option value="贵阳">贵阳</option>
-                    <option value="兰州">兰州</option>
-                    <option value="太原">太原</option>
-                    <option value="石家庄">石家庄</option>
-                    <option value="长春">长春</option>
-                    <option value="南昌">南昌</option>
-                    <option value="南宁">南宁</option>
-                    <option value="海口">海口</option>
-                    <option value="银川">银川</option>
-                    <option value="西宁">西宁</option>
-                    <option value="呼和浩特">呼和浩特</option>
-                    <option value="乌鲁木齐">乌鲁木齐</option>
-                    <option value="拉萨">拉萨</option>
-                    <option value="全国">全国（不限地区）</option>
-                    <option value="线上">线上/远程</option>
-                </select>
-            </div>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="搜索竞赛名称...">
-            </div>
-        </div>
-
-        <!-- 竞赛列表 -->
-        <div class="competition-list" id="competitionList">
-            <div class="loading">加载中...</div>
-        </div>
-
-        <!-- 日历视图 -->
-        <div class="calendar-view" id="calendarView" style="display: none;">
-            <div class="calendar-header">
-                <button class="cal-nav-btn" id="prevMonth">◀</button>
-                <h3 id="currentMonthTitle">2026年7月</h3>
-                <button class="cal-nav-btn" id="nextMonth">▶</button>
-            </div>
-            <div class="calendar-weekdays">
-                <span>周一</span><span>周二</span><span>周三</span><span>周四</span>
-                <span>周五</span><span>周六</span><span>周日</span>
-            </div>
-            <div class="calendar-grid" id="calendarGrid"></div>
-        </div>
-    </main>
+    <main id="app" class="container"></main>
 
     <footer class="footer">
-        <div class="container">
-            <p>数据来源：赛氪网、ICPC官网、Hackalist · 每日自动更新</p>
-            <p class="small">开源项目 · 仅供学习参考，报名请以官方信息为准</p>
+        <div class="footer-inner">
+            <span>数据来源：教育部白名单 · ICPC官网 · 赛氪网</span>
+            <span class="footer-sep">|</span>
+            <span>开源项目 · 仅供参考，以官方信息为准</span>
         </div>
     </footer>
 
