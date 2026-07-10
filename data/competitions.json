@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10 09:12:15",
+  "updated_at": "2026-07-10 09:12:49",
   "total": 18,
   "categories": {
     "创新创业类": 3,
@@ -26,7 +26,7 @@
       "region": "national",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "挑战杯全国大学生课外学术科技作品竞赛",
@@ -42,7 +42,7 @@
       "region": "national",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "挑战杯中国大学生创业计划竞赛",
@@ -58,7 +58,7 @@
       "region": "national",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "ICPC国际大学生程序设计竞赛亚洲区域赛",
@@ -74,7 +74,7 @@
       "region": "regional",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "中国大学生计算机设计大赛",
@@ -90,7 +90,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "蓝桥杯全国软件和信息技术专业人才大赛",
@@ -106,7 +106,7 @@
       "region": "regional",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生信息安全竞赛",
@@ -122,7 +122,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生数学建模竞赛",
@@ -138,7 +138,7 @@
       "region": "regional",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生数学竞赛",
@@ -154,7 +154,7 @@
       "region": "regional",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生电子设计竞赛",
@@ -170,7 +170,7 @@
       "region": "regional",
       "gold_weight": 5,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生光电设计竞赛",
@@ -186,7 +186,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "西门子杯中国智能制造挑战赛",
@@ -202,7 +202,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生机械创新设计大赛",
@@ -218,7 +218,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生工程训练综合能力竞赛",
@@ -234,7 +234,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生英语竞赛",
@@ -250,7 +250,7 @@
       "region": "regional",
       "gold_weight": 3,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生化工设计竞赛",
@@ -266,7 +266,7 @@
       "region": "national",
       "gold_weight": 4,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生市场调查与分析大赛",
@@ -282,7 +282,7 @@
       "region": "national",
       "gold_weight": 3,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     },
     {
       "title": "全国大学生电子商务创新创意及创业挑战赛",
@@ -298,7 +298,7 @@
       "region": "national",
       "gold_weight": 3,
       "official": true,
-      "fetched_at": "2026-07-10 09:11:57"
+      "fetched_at": "2026-07-10 09:12:31"
     }
   ]
 }
