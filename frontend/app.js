@@ -83,6 +83,11 @@ function initEventListeners() {
         currentCalendarDate.setMonth(currentCalendarDate.getMonth() + 1);
         renderCalendar();
     });
+
+    // ESC 关闭弹窗
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDayPopup();
+    });
 }
 
 // 过滤数据
@@ -284,5 +289,97 @@ function createDayCell(day, isOtherMonth, year, month, isToday = false) {
         cell.appendChild(moreEl);
     }
 
+    // 点击日历格子弹出当日竞赛详情
+    cell.addEventListener('click', () => {
+        renderDayPopup(year, month, day);
+    });
+
     return cell;
+}
+
+// 渲染当日竞赛弹窗
+function renderDayPopup(year, month, day) {
+    closeDayPopup();
+    const events = getCompetitionsByDate(year, month, day);
+    const dateStr = `${year}年${month + 1}月${day}日`;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'day-popup-overlay';
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeDayPopup();
+    });
+
+    const popup = document.createElement('div');
+    popup.className = 'day-popup';
+
+    const header = document.createElement('div');
+    header.className = 'day-popup-header';
+    const title = document.createElement('span');
+    title.textContent = dateStr;
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'day-close-btn';
+    closeBtn.textContent = '✕';
+    closeBtn.addEventListener('click', closeDayPopup);
+    header.appendChild(title);
+    header.appendChild(closeBtn);
+    popup.appendChild(header);
+
+    if (events.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'day-popup-item';
+        empty.style.color = '#999';
+        empty.textContent = '当天无竞赛';
+        popup.appendChild(empty);
+    } else {
+        events.forEach(comp => {
+            const item = document.createElement('div');
+            item.className = 'day-popup-item';
+
+            const tag = document.createElement('span');
+            tag.className = 'category-tag';
+            tag.textContent = comp.category || '其他';
+
+            const link = document.createElement('a');
+            link.href = comp.url;
+            link.target = '_blank';
+            link.textContent = comp.title;
+
+            const status = document.createElement('span');
+            status.className = `status-tag ${getStatusClass(comp.status)}`;
+            status.textContent = comp.status || '敬请关注';
+
+            const meta = document.createElement('div');
+            meta.className = 'day-popup-item-meta';
+            if (comp.registration_deadline) {
+                const dl = document.createElement('span');
+                dl.textContent = `报名截止：${comp.registration_deadline}`;
+                meta.appendChild(dl);
+            }
+            if (comp.contest_start) {
+                const cs = document.createElement('span');
+                cs.textContent = `比赛时间：${comp.contest_start}`;
+                meta.appendChild(cs);
+            }
+            if (comp.raw_time && !comp.contest_start) {
+                const rt = document.createElement('span');
+                rt.textContent = comp.raw_time;
+                meta.appendChild(rt);
+            }
+
+            item.appendChild(tag);
+            item.appendChild(link);
+            item.appendChild(status);
+            item.appendChild(meta);
+            popup.appendChild(item);
+        });
+    }
+
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+}
+
+// 关闭当日竞赛弹窗
+function closeDayPopup() {
+    const existing = document.querySelector('.day-popup-overlay');
+    if (existing) existing.remove();
 }
