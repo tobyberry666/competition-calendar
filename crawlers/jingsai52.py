@@ -7,36 +7,12 @@ from bs4 import BeautifulSoup
 import time
 from datetime import datetime
 
+from categories import guess_category
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "zh-CN,zh;q=0.9"
 }
-
-CATEGORY_MAP = {
-    "学科竞赛": "学科类",
-    "科技创新": "科技类",
-    "创新创业": "创新创业类",
-    "文艺体育": "文体类",
-    "技能证书": "技能类",
-    "数学建模": "数学类",
-    "英语": "外语类",
-    "计算机": "计算机类",
-    "电子": "电子信息类",
-    "机械": "机械类",
-}
-
-
-def guess_category(title, categories=None):
-    """根据标题和分类猜测统一分类"""
-    if categories:
-        for cat in categories:
-            for keyword, mapped in CATEGORY_MAP.items():
-                if keyword in cat:
-                    return mapped
-    for keyword, mapped in CATEGORY_MAP.items():
-        if keyword in title:
-            return mapped
-    return "其他"
 
 
 def parse_date(date_str):

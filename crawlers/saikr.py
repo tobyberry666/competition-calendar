@@ -8,37 +8,12 @@ import json
 import time
 from datetime import datetime
 
+from categories import guess_category
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept-Language": "zh-CN,zh;q=0.9"
 }
-
-# 竞赛分类映射
-CATEGORY_MAP = {
-    "算法编程": "计算机类",
-    "人工智能": "计算机类",
-    "大数据": "计算机类",
-    "网络安全": "计算机类",
-    "计算机设计": "计算机类",
-    "创新创业": "创新创业类",
-    "创业大赛": "创新创业类",
-    "互联网+": "创新创业类",
-    "挑战杯": "创新创业类",
-    "光电设计": "电子信息类",
-    "电子设计": "电子信息类",
-    "数学建模": "数学类",
-    "英语": "外语类",
-    "翻译": "外语类",
-    "雅思": "外语类",
-}
-
-
-def guess_category(title):
-    """根据竞赛标题猜测分类"""
-    for keyword, category in CATEGORY_MAP.items():
-        if keyword in title:
-            return category
-    return "其他"
 
 
 def parse_date(date_str):
