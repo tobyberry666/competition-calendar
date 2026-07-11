@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCPC Navigator</title>
+    <meta name="description" content="中国大学生程序设计竞赛导航 — ICPC、CCPC、蓝桥杯、数学建模等竞赛信息聚合">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#/" class="nav-brand">
+                <span class="brand-icon">&lt;/&gt;</span>
+                <span class="brand-text">XCPC Navigator</span>
+            </a>
+            <div class="nav-links">
+                <a href="#/" class="nav-link" data-route="dashboard">Dashboard</a>
+                <a href="#/all" class="nav-link" data-route="all">全部竞赛</a>
+                <a href="#/favorites" class="nav-link" data-route="favorites">⭐ 我的赛季</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app" class="container"></main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>数据来源：教育部白名单 · ICPC官网 · 赛氪网</span>
+            <span class="footer-sep">|</span>
+            <span>开源项目 · 仅供参考，以官方信息为准</span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
