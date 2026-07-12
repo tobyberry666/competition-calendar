@@ -1,27 +1,31 @@
-// XCPC Navigator — SPA with hash routing
+// 竞赛日历 — 大学生竞赛信息收集 (SPA with hash routing)
 (function () {
     'use strict';
 
     let allCompetitions = [];
-    let favorites = JSON.parse(localStorage.getItem('xcpc_favorites') || '[]');
+    let favorites = JSON.parse(localStorage.getItem('comp_favorites') || '[]');
     let countdownTimer = null;
 
-    const TYPE_TABS = [
+    // 分类筛选（与 crawlers/categories.py 的 STANDARD_CATEGORIES 对齐，前端仅展示常用大类标签）
+    const CATEGORY_TABS = [
         { key: 'all', label: '全部' },
-        { key: 'icpc', label: 'ICPC/CCPC' },
-        { key: 'lanqiao', label: '蓝桥杯' },
-        { key: 'math', label: '数学建模' },
-        { key: 'innovation', label: '创新创业' },
-        { key: 'other', label: '其他' }
+        { key: '计算机类', label: '计算机类' },
+        { key: '创新创业类', label: '创新创业类' },
+        { key: '商科类', label: '商科/金融' },
+        { key: '外语类', label: '外语类' },
+        { key: '数学类', label: '数学类' },
+        { key: '设计类', label: '设计类' },
+        { key: '电子信息类', label: '电子信息类' },
+        { key: '其他', label: '其他' },
     ];
 
     const DIFFICULTIES = ['全部', '入门', '中级', '高级'];
 
     const TIME_RANGES = [
         { key: 'all', label: '全部' },
-        { key: 'week', label: '本周' },
-        { key: 'month', label: '本月' },
-        { key: 'quarter', label: '未来三个月' }
+        { key: 'week', label: '本周截止' },
+        { key: 'month', label: '本月截止' },
+        { key: 'quarter', label: '三个月内截止' },
     ];
 
     const CITIES = [
@@ -131,52 +135,31 @@
         } else {
             favorites.push(id);
         }
-        localStorage.setItem('xcpc_favorites', JSON.stringify(favorites));
+        localStorage.setItem('comp_favorites', JSON.stringify(favorites));
         route();
     }
 
-    function matchType(comp) {
-        const subs = (comp.subcategory || []).map(s => s.toLowerCase());
-        const name = (comp.name || '').toLowerCase();
-        const cat = (comp.category || '').toLowerCase();
-        return subs.some(s => s.includes('icpc') || s.includes('ccpc')) ||
-               name.includes('icpc') || name.includes('ccpc') || cat.includes('icpc');
+    // 按报名截止日期升序：最近的截止排最前，无日期的列在最后
+    function sortByDeadline(list) {
+        return list.slice().sort((a, b) => {
+            const da = parseDate(a.timeline && a.timeline.registrationDeadline);
+            const db = parseDate(b.timeline && b.timeline.registrationDeadline);
+            if (!da && !db) return 0;
+            if (!da) return 1;
+            if (!db) return -1;
+            return da - db;
+        });
     }
 
-    function matchLanqiao(comp) {
-        const name = (comp.name || '').toLowerCase();
-        return name.includes('蓝桥杯');
-    }
-
-    function matchMath(comp) {
-        const name = (comp.name || '').toLowerCase();
-        return name.includes('数学建模') || name.includes('math');
-    }
-
-    function matchInnovation(comp) {
-        const name = (comp.name || '').toLowerCase();
-        const cat = (comp.category || '').toLowerCase();
-        return name.includes('互联网+') || name.includes('创新创业') || name.includes('挑战杯') ||
-               cat.includes('创新创业');
-    }
-
-    function getFiltered(typeKey, difficulty, timeRange, search, city) {
+    function getFiltered(categoryKey, difficulty, timeRange, search, city) {
         return allCompetitions.filter(comp => {
-            // Type filter
-            if (typeKey !== 'all') {
-                if (typeKey === 'icpc' && !matchType(comp)) return false;
-                if (typeKey === 'lanqiao' && !matchLanqiao(comp)) return false;
-                if (typeKey === 'math' && !matchMath(comp)) return false;
-                if (typeKey === 'innovation' && !matchInnovation(comp)) return false;
-                if (typeKey === 'other') {
-                    if (matchType(comp) || matchLanqiao(comp) || matchMath(comp) || matchInnovation(comp)) return false;
-                }
-            }
-            // Difficulty
+            // 分类筛选
+            if (categoryKey !== 'all' && (comp.category || '其他') !== categoryKey) return false;
+            // 难度
             if (difficulty !== '全部' && comp.difficulty !== difficulty) return false;
-            // Search
+            // 搜索
             if (search && !(comp.name || '').toLowerCase().includes(search.toLowerCase())) return false;
-            // City
+            // 城市
             if (city !== '全国') {
                 const loc = comp.location || {};
                 const display = (loc.display || '').toLowerCase();
@@ -188,13 +171,12 @@
                     if (!c.includes(city.toLowerCase()) && !p.includes(city.toLowerCase()) && !display.includes(city.toLowerCase())) return false;
                 }
             }
-            // Time range
+            // 时间范围（基于报名截止日期）
             if (timeRange !== 'all') {
                 const now = today();
-                const deadline = parseDate(comp.timeline && comp.timeline.competitionDate);
+                const deadline = parseDate(comp.timeline && comp.timeline.registrationDeadline);
                 if (!deadline) {
-                    // If no date, only include in 'all'
-                    if (timeRange !== 'all') return false;
+                    return false;
                 } else {
                     if (timeRange === 'week' && daysBetween(now, deadline) > 7) return false;
                     if (timeRange === 'month' && daysBetween(now, deadline) > 30) return false;
@@ -274,22 +256,22 @@
 
         app.innerHTML = `
             <div class="dash-header">
-                <div class="dash-title">&lt;XCPC Navigator/&gt;</div>
-                <div class="dash-subtitle">中国大学生程序设计竞赛导航</div>
+                <div class="dash-title">竞赛日历</div>
+                <div class="dash-subtitle">全网大学生竞赛信息收集 · 按最近截止日期排序</div>
             </div>
 
             <div class="stats-bar">
                 <div class="stat-item">
                     <span class="stat-value">${allCompetitions.length}</span>
-                    <span class="stat-label">Total Competitions</span>
+                    <span class="stat-label">竞赛总数</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-value">${upcomingDeadline.length}</span>
-                    <span class="stat-label">7-day Deadlines</span>
+                    <span class="stat-label">7天内截止</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-value">${cats.size}</span>
-                    <span class="stat-label">Categories</span>
+                    <span class="stat-label">覆盖分类</span>
                 </div>
             </div>
 
@@ -310,12 +292,12 @@
             ` : ''}
 
             <div class="section-header">
-                <span class="section-title">📋 全部竞赛</span>
+                <span class="section-title">📋 全部竞赛（按截止日期）</span>
                 <span class="section-count">${allCompetitions.length}</span>
             </div>
-            ${renderFilterBar('all', '全部', 'all', '', '全部')}
+            ${renderFilterBar('all', '全部', 'all', '', '全国')}
             <div class="card-list" id="filteredCards">
-                ${allCompetitions.slice(0, 50).map(renderCard).join('')}
+                ${sortByDeadline(allCompetitions).map(renderCard).join('')}
             </div>
         `;
 
@@ -323,24 +305,24 @@
         startCountdownUpdates();
     }
 
-    function renderFilterBar(typeKey, difficulty, timeRange, search, city) {
+    function renderFilterBar(categoryKey, difficulty, timeRange, search, city) {
         return `<div class="filter-bar">
             <div class="filter-row">
-                <span class="filter-label">Type</span>
+                <span class="filter-label">分类</span>
                 <div class="filter-tabs">
-                    ${TYPE_TABS.map(t => `<button class="filter-tab ${t.key === typeKey ? 'active' : ''}" data-type="${t.key}">${t.label}</button>`).join('')}
+                    ${CATEGORY_TABS.map(t => `<button class="filter-tab ${t.key === categoryKey ? 'active' : ''}" data-type="${t.key}">${t.label}</button>`).join('')}
                 </div>
             </div>
             <div class="filter-row">
-                <span class="filter-label">Difficulty</span>
+                <span class="filter-label">难度</span>
                 <select class="filter-select" id="filterDifficulty">
                     ${DIFFICULTIES.map(d => `<option ${d === difficulty ? 'selected' : ''}>${d}</option>`).join('')}
                 </select>
-                <span class="filter-label" style="margin-left:12px;">Time</span>
+                <span class="filter-label" style="margin-left:12px;">截止</span>
                 <select class="filter-select" id="filterTime">
                     ${TIME_RANGES.map(t => `<option value="${t.key}" ${t.key === timeRange ? 'selected' : ''}>${t.label}</option>`).join('')}
                 </select>
-                <span class="filter-label" style="margin-left:12px;">City</span>
+                <span class="filter-label" style="margin-left:12px;">城市</span>
                 <select class="filter-select" id="filterCity">
                     ${CITIES.map(c => `<option ${c === city ? 'selected' : ''}>${c}</option>`).join('')}
                 </select>
@@ -352,13 +334,13 @@
     }
 
     function bindFilters() {
-        let currentType = 'all';
+        let currentCategory = 'all';
 
         document.querySelectorAll('.filter-tab[data-type]').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.filter-tab[data-type]').forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                currentType = tab.dataset.type;
+                currentCategory = tab.dataset.type;
                 applyFilters();
             });
         });
@@ -371,15 +353,16 @@
         });
 
         function applyFilters() {
-            const typeKey = currentType;
+            const categoryKey = currentCategory;
             const diff = document.getElementById('filterDifficulty').value;
             const time = document.getElementById('filterTime').value;
             const search = document.getElementById('filterSearch').value.trim();
             const city = document.getElementById('filterCity').value;
-            const filtered = getFiltered(typeKey, diff, time, search, city);
+            const filtered = getFiltered(categoryKey, diff, time, search, city);
             const container = document.getElementById('filteredCards');
             if (container) {
-                container.innerHTML = filtered.length > 0 ? filtered.map(renderCard).join('') : '<div class="empty-state"><div class="empty-state-text">没有匹配的竞赛</div></div>';
+                const sorted = sortByDeadline(filtered);
+                container.innerHTML = sorted.length > 0 ? sorted.map(renderCard).join('') : '<div class="empty-state"><div class="empty-state-text">没有匹配的竞赛</div></div>';
             }
         }
     }
@@ -389,11 +372,11 @@
         app.innerHTML = `
             <div class="dash-header">
                 <div class="dash-title">全部竞赛</div>
-                <div class="dash-subtitle">共 ${allCompetitions.length} 项</div>
+                <div class="dash-subtitle">共 ${allCompetitions.length} 项 · 按截止日期排序</div>
             </div>
-            ${renderFilterBar('all', '全部', 'all', '', '全部')}
+            ${renderFilterBar('all', '全部', 'all', '', '全国')}
             <div class="card-list" id="filteredCards">
-                ${allCompetitions.map(renderCard).join('')}
+                ${sortByDeadline(allCompetitions).map(renderCard).join('')}
             </div>
         `;
         bindFilters();
@@ -406,7 +389,7 @@
         if (favComps.length === 0) {
             app.innerHTML = `
                 <div class="dash-header">
-                    <div class="dash-title">⭐ 我的赛季</div>
+                    <div class="dash-title">⭐ 我的收藏</div>
                     <div class="dash-subtitle">收藏的竞赛</div>
                 </div>
                 <div class="empty-state">
@@ -418,11 +401,11 @@
         }
         app.innerHTML = `
             <div class="dash-header">
-                <div class="dash-title">⭐ 我的赛季</div>
+                <div class="dash-title">⭐ 我的收藏</div>
                 <div class="dash-subtitle">已收藏 ${favComps.length} 项</div>
             </div>
             <div class="card-list">
-                ${favComps.map(renderCard).join('')}
+                ${sortByDeadline(favComps).map(renderCard).join('')}
             </div>
         `;
         startCountdownUpdates();
