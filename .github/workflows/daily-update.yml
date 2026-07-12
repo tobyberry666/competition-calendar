@@ -14,6 +14,7 @@ on:
       - "**.py"
       - "requirements.txt"
       - "frontend/**"
+      - ".github/workflows/**"
 
 permissions:
   contents: write
@@ -65,21 +66,35 @@ jobs:
   deploy:
     needs: crawl-and-deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: 设置 Pages
         uses: actions/configure-pages@v4
 
-      - name: 上传前端 artifact
+      - name: 上传前端 artifact (GitHub Actions 部署源)
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./frontend
 
-      - name: 部署到 GitHub Pages
+      - name: 部署到 GitHub Pages (Actions 部署源)
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: 同步 frontend 到 gh-pages 分支 (branch 部署源)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git subtree push --prefix=frontend origin gh-pages || \
+          git push origin "$(git subtree split --prefix=frontend HEAD)":gh-pages --force
