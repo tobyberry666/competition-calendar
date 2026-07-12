@@ -10,7 +10,7 @@
 ## ✨ 功能特性
 
 - 🤖 **全自动采集**：GitHub Actions 每天定时爬取，无需人工维护
-- 📊 **多数据源**：教育部白名单 + 赛氪网、我爱竞赛网、竞观 Compass、ICPC、Hackalist、DoraHacks、Devpost 等 8 个来源
+- 📊 **多数据源**：教育部白名单 + 赛氪网、我爱竞赛网、竞观 Compass、ICPC、Hackalist、DoraHacks、Devpost、商科/文科专项等 9 个来源
 - 🏷️ **分类筛选**：计算机类、创新创业类、商科/金融、外语类、数学类、设计类、电子信息类等（与 crawlers 分类对齐）
 - 🔍 **关键词搜索**：快速找到感兴趣的竞赛
 - ⏰ **按截止日期排序**：首页与全部列表默认按报名截止时间升序，最近截止的排最前，不错过任何一场
@@ -23,7 +23,7 @@
 
 ```
 competition-calendar/
-├── crawlers/                  # 爬虫模块（8 个数据源 + 分类/重试/URL 校验 helper）
+├── crawlers/                  # 爬虫模块（9 个数据源 + 分类/重试/URL 校验 helper）
 │   ├── __init__.py
 │   ├── saikr.py              # 赛氪网（主数据源，最全，覆盖各学科）
 │   ├── jingsai52.py          # 我爱竞赛网
@@ -32,6 +32,7 @@ competition-calendar/
 │   ├── hackalist.py          # 全球黑客松 API
 │   ├── dorahacks.py          # DoraHacks 黑客松
 │   ├── devpost.py            # Devpost 黑客松
+│   ├── business_liberal_arts.py  # 商科/文科专项爬虫（保底工行杯、正大杯等稳定进库）
 │   ├── seed_data.py          # 教育部白名单种子数据
 │   ├── categories.py         # 统一竞赛分类映射（计算机/商科/外语/数学/设计…）
 │   ├── retry.py              # 请求重试
@@ -97,6 +98,7 @@ Windows 用户直接双击 `启动预览.bat` 即可。
 | Hackalist | 全球黑客松活动 | 公开 API | ⭐⭐⭐ |
 | DoraHacks | 全球黑客松活动 | 公开 API | ⭐⭐⭐ |
 | Devpost | 全球黑客松活动 | 公开 API | ⭐⭐⭐ |
+| 商科/文科专项 | 工行杯、正大杯·市调、大广赛、外研社杯等（保底清单 + 实时补充） | 保底清单 + 网页爬虫 | ⭐⭐⭐⭐⭐ |
 
 ## 🔧 添加新的数据源
 

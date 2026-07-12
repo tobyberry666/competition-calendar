@@ -19,6 +19,7 @@ from crawlers import (
     crawl_jingrace,
     crawl_dorahacks,
     crawl_devpost,
+    crawl_business_liberal,
     get_seed_competitions,
 )
 from crawlers.url_validator import validate_and_discover_urls
@@ -89,7 +90,7 @@ def main():
     all_data = []
 
     # 0. 种子数据（教育部白名单，确保基础数据）
-    print("\n[0/8] 加载教育部白名单种子数据...")
+    print("\n[0/9] 加载教育部白名单种子数据...")
     try:
         seed_data = get_seed_competitions()
         all_data.append(seed_data)
@@ -98,7 +99,7 @@ def main():
         all_data.append([])
 
     # 1. 赛氪（主数据源，最全面）
-    print("\n[1/8] 正在爬取赛氪网...")
+    print("\n[1/9] 正在爬取赛氪网...")
     try:
         saikr_data = crawl_saikr(max_pages=3)
         all_data.append(saikr_data)
@@ -107,7 +108,7 @@ def main():
         all_data.append([])
 
     # 2. 我爱竞赛网
-    print("\n[2/8] 正在爬取我爱竞赛网...")
+    print("\n[2/9] 正在爬取我爱竞赛网...")
     try:
         jingsai52_data = crawl_52jingsai(max_pages=3)
         all_data.append(jingsai52_data)
@@ -116,7 +117,7 @@ def main():
         all_data.append([])
 
     # 3. 竞观 Compass
-    print("\n[3/8] 正在爬取竞观Compass...")
+    print("\n[3/9] 正在爬取竞观Compass...")
     try:
         jingrace_data = crawl_jingrace()
         all_data.append(jingrace_data)
@@ -125,7 +126,7 @@ def main():
         all_data.append([])
 
     # 4. ICPC 区域赛
-    print("\n[4/8] 正在爬取ICPC区域赛...")
+    print("\n[4/9] 正在爬取ICPC区域赛...")
     try:
         icpc_data = crawl_icpc_regional()
         all_data.append(icpc_data)
@@ -134,7 +135,7 @@ def main():
         all_data.append([])
 
     # 5. Hackalist 全球黑客松
-    print("\n[5/8] 正在获取黑客松数据...")
+    print("\n[5/9] 正在获取黑客松数据...")
     try:
         hackathon_data = crawl_hackathons()
         all_data.append(hackathon_data)
@@ -143,7 +144,7 @@ def main():
         all_data.append([])
 
     # 6. DoraHacks 全球黑客松
-    print("\n[6/8] 正在获取DoraHacks黑客松...")
+    print("\n[6/9] 正在获取DoraHacks黑客松...")
     try:
         dorahacks_data = crawl_dorahacks()
         all_data.append(dorahacks_data)
@@ -152,12 +153,21 @@ def main():
         all_data.append([])
 
     # 7. Devpost 全球黑客松
-    print("\n[7/8] 正在获取Devpost黑客松...")
+    print("\n[7/9] 正在获取Devpost黑客松...")
     try:
         devpost_data = crawl_devpost()
         all_data.append(devpost_data)
     except Exception as e:
         print(f"Devpost获取异常: {e}")
+        all_data.append([])
+
+    # 8. 商科 / 文科竞赛专项爬虫（保证工行杯、正大杯等稳定进库）
+    print("\n[8/9] 正在爬取商科/文科竞赛...")
+    try:
+        business_liberal_data = crawl_business_liberal(max_pages=2)
+        all_data.append(business_liberal_data)
+    except Exception as e:
+        print(f"商科/文科爬虫异常: {e}")
         all_data.append([])
 
     # 合并去重
