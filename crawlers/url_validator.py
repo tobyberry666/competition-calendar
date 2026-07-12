@@ -30,6 +30,11 @@ KNOWN_DOMAINS = {
     "电子商务": ["3chuang.net"],
     "化工设计": ["chemyjs.com"],
     "西门子杯": ["siemens.com.cn"],
+    "正大杯": ["chinass.org"],
+    "市场调查": ["chinass.org"],
+    "工行杯": ["icbc.com.cn"],
+    "广告": ["sun-ada.net"],
+    "大广赛": ["sun-ada.net"],
 }
 
 
