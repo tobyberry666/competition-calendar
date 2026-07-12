@@ -1,16 +1,19 @@
 {
-  "updated_at": "2026-07-12 04:22:22",
-  "total": 22,
+  "updated_at": "2026-07-12 06:52:08",
+  "total": 88,
   "categories": {
-    "外语类": 2,
-    "计算机类": 4,
-    "商科类": 5,
-    "创新创业类": 2,
-    "电子信息类": 3,
-    "化工类": 1,
-    "设计类": 1,
+    "外语类": 4,
+    "计算机类": 16,
+    "商科类": 4,
+    "创新创业类": 21,
+    "电子信息类": 4,
+    "化工类": 2,
+    "设计类": 11,
     "数学类": 2,
-    "机械类": 2
+    "机械类": 2,
+    "技能类": 6,
+    "其他": 14,
+    "科技类": 2
   },
   "competitions": [
     {
@@ -41,7 +44,8 @@
       "difficulty": "Beginner",
       "prize": "",
       "region": "regional",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "蓝桥杯软件和信息技术专业人才大赛",
@@ -63,15 +67,16 @@
         "competitionDate": "2026-06-13",
         "resultDate": null
       },
-      "description": "工业和信息化部人才交流中心主办，参赛人数最多的IT类竞赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 27 项）。",
       "officialUrl": "https://dasai.lanqiao.cn",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Beginner",
       "prize": "",
       "region": "regional",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "全国大学生市场调查与分析大赛",
@@ -87,21 +92,22 @@
         "display": "全国"
       },
       "timeline": {
-        "registrationStart": null,
+        "registrationStart": "2026-10-25",
         "registrationDeadline": "2026-03-31",
         "submissionDeadline": null,
         "competitionDate": "2026-05-25",
         "resultDate": null
       },
-      "description": "中国商业统计学会主办",
+      "description": "中国商业统计学会主办、正大集团冠名的全国性大学生市场调查类赛事，文科/商科生热门选择。[预计] 第17届（2026-2027学年）预计2026年10月启动报名，省赛次年4月、全国总决赛次年5月；具体日期以官网 china-cssc.org 通知为准。第16届已于2026年5月结束。",
       "officialUrl": "https://www.chinastatistics.org/",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项) + 商科文科爬虫·保底清单",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Beginner",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "全国大学生电子商务三创赛",
@@ -123,15 +129,16 @@
         "competitionDate": "2026-07-15",
         "resultDate": null
       },
-      "description": "教育部电子商务类专业教学指导委员会主办",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 12 项）。",
       "officialUrl": "http://www.3chuang.net",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Beginner",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "中国大学生计算机设计大赛",
@@ -153,15 +160,16 @@
         "competitionDate": "2026-08-01",
         "resultDate": null
       },
-      "description": "教育部高校计算机类专业教学指导委员会主办",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 25 项）。",
       "officialUrl": "https://jsjds.blcu.edu.cn/",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "挑战杯课外学术科技作品竞赛",
@@ -183,15 +191,16 @@
         "competitionDate": "2026-11-01",
         "resultDate": null
       },
-      "description": "共青团中央主办，大挑，两年一届，奇数年举办",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 2 项）。",
       "officialUrl": "http://www.tiaozhanbei.net",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Advanced",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "西门子杯中国智能制造挑战赛",
@@ -213,15 +222,16 @@
         "competitionDate": "2026-08-10",
         "resultDate": null
       },
-      "description": "西门子与教育部合作举办的工业自动化竞赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 23 项）。",
       "officialUrl": "https://www.siemens.com.cn/",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "全国大学生信息安全竞赛",
@@ -243,15 +253,16 @@
         "competitionDate": "2026-08-15",
         "resultDate": null
       },
-      "description": "国内信息安全领域顶级大学生竞赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 33 项）。",
       "officialUrl": "http://www.ciscn.cn",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Advanced",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "全国大学生光电设计竞赛",
@@ -273,15 +284,16 @@
         "competitionDate": "2026-07-20",
         "resultDate": null
       },
-      "description": "中国光学学会主办，光电领域最高水平大学生竞赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 30 项）。",
       "officialUrl": "https://www.optics.sjtu.edu.cn/",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "全国大学生化工设计竞赛",
@@ -303,10 +315,41 @@
         "competitionDate": "2026-08-01",
         "resultDate": null
       },
-      "description": "中国化工学会化学工程专业委员会主办",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 18 项）。",
       "officialUrl": "https://chemyjs.com/",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "已截止",
+      "confidence": "high"
+    },
+    {
+      "id": "挑战杯-中国大学生创业计划大赛",
+      "name": "“挑战杯”中国大学生创业计划大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "共青团中央等",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": "2026-06-19",
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 3 项）。",
+      "officialUrl": "http://www.tiaozhanbei.net",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 3,
+      "confidence": "high",
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
@@ -341,16 +384,14 @@
       "difficulty": "Advanced",
       "prize": "",
       "region": "national",
-      "status": "已截止"
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "全国大学生广告艺术大赛",
-      "name": "全国大学生广告艺术大赛（大广赛）",
+      "name": "全国大学生广告艺术大赛",
       "category": "设计类",
-      "subcategory": [
-        "广告",
-        "大广赛"
-      ],
+      "subcategory": [],
       "organizer": "教育部高等教育司",
       "location": {
         "province": "",
@@ -365,14 +406,16 @@
         "resultDate": null
       },
       "description": "教育部认可的全国大学生广告艺术大赛，覆盖平面、视频、动画、文案、营销策划等赛道，设计/传媒/文科生核心赛事。[预计] 2026年第16届全国总评审预计7-8月，报名通常6月底前截止。",
-      "officialUrl": "http://www.sun-ada.net",
-      "source": "商科文科爬虫·保底清单",
+      "officialUrl": "https://www.sun-ada.net",
+      "source": "教育部白名单(84项) + 商科文科爬虫·保底清单",
       "sourceVerified": true,
+      "whitelistRank": 10,
+      "confidence": "high",
       "lastUpdated": "2026-07-12",
-      "difficulty": "Intermediate",
+      "difficulty": "Beginner",
       "prize": "",
       "region": "national",
-      "status": "进行中"
+      "status": "待更新"
     },
     {
       "id": "全国大学生数学建模竞赛",
@@ -394,15 +437,16 @@
         "competitionDate": "2026-09-11",
         "resultDate": null
       },
-      "description": "全国高校规模最大的基础性学科竞赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 5 项）。",
       "officialUrl": "http://www.mcm.edu.cn",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "regional",
-      "status": "报名中"
+      "status": "报名中",
+      "confidence": "high"
     },
     {
       "id": "icpc亚洲区域赛",
@@ -425,24 +469,22 @@
         "competitionDate": "2026-11-15",
         "resultDate": null
       },
-      "description": "国际顶级算法竞赛，ACM/ICPC亚洲区预选赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 4 项）。",
       "officialUrl": "https://icpc.pku.edu.cn",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Advanced",
       "prize": "",
       "region": "regional",
-      "status": "报名中"
+      "status": "报名中",
+      "confidence": "high"
     },
     {
-      "id": "工行杯全国大学生金融科技创新大赛",
-      "name": "工行杯（全国大学生金融科技创新大赛）",
-      "category": "商科类",
-      "subcategory": [
-        "金融科技",
-        "工行杯"
-      ],
+      "id": "工行杯-全国大学生金融科技创新大赛",
+      "name": "“工行杯”全国大学生金融科技创新大赛",
+      "category": "创新创业类",
+      "subcategory": [],
       "organizer": "中国工商银行",
       "location": {
         "province": "",
@@ -458,13 +500,15 @@
       },
       "description": "中国工商银行主办的第17届全国大学生金融科技创新大赛，主题「数智银行·创见未来」，设科技金融、绿色金融、普惠金融等十大方向。报名2026年5月—9月，官网报名截止9月30日（部分校赛渠道提示9月1日，以官网 gonghangbei.com 为准）；省赛10月、全国总决赛12月。特等奖2万元/组并提供工行实习机会。",
       "officialUrl": "https://www.gonghangbei.com",
-      "source": "商科文科爬虫·保底清单",
+      "source": "教育部白名单(84项) + 商科文科爬虫·保底清单",
       "sourceVerified": true,
+      "whitelistRank": 55,
+      "confidence": "high",
       "lastUpdated": "2026-07-12",
-      "difficulty": "Intermediate",
-      "prize": "特等奖2万元/组 + 工行实习",
+      "difficulty": "Beginner",
+      "prize": "",
       "region": "national",
-      "status": "报名中"
+      "status": "待更新"
     },
     {
       "id": "全国大学生数学竞赛",
@@ -494,7 +538,8 @@
       "difficulty": "Advanced",
       "prize": "",
       "region": "regional",
-      "status": "即将开始"
+      "status": "即将开始",
+      "confidence": "high"
     },
     {
       "id": "外研社国才杯全国英语演讲大赛",
@@ -525,48 +570,15 @@
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "未开始"
-    },
-    {
-      "id": "正大杯全国大学生市场调查与分析大赛",
-      "name": "正大杯（全国大学生市场调查与分析大赛）",
-      "category": "商科类",
-      "subcategory": [
-        "市场调查",
-        "正大杯"
-      ],
-      "organizer": "中国商业统计学会（正大集团冠名）",
-      "location": {
-        "province": "",
-        "city": "",
-        "display": "全国"
-      },
-      "timeline": {
-        "registrationStart": "2026-10-25",
-        "registrationDeadline": "2026-11-20",
-        "submissionDeadline": null,
-        "competitionDate": "2027-05-25",
-        "resultDate": null
-      },
-      "description": "中国商业统计学会主办、正大集团冠名的全国性大学生市场调查类赛事，文科/商科生热门选择。[预计] 第17届（2026-2027学年）预计2026年10月启动报名，省赛次年4月、全国总决赛次年5月；具体日期以官网 china-cssc.org 通知为准。第16届已于2026年5月结束。",
-      "officialUrl": "https://www.china-cssc.org/list-550-1.html",
-      "source": "商科文科爬虫·保底清单",
-      "sourceVerified": true,
-      "lastUpdated": "2026-07-12",
-      "difficulty": "Beginner",
-      "prize": "",
-      "region": "national",
-      "status": "未开始"
+      "status": "未开始",
+      "confidence": "high"
     },
     {
       "id": "中国大学生服务外包创新创业大赛",
       "name": "中国大学生服务外包创新创业大赛",
-      "category": "商科类",
-      "subcategory": [
-        "服务外包",
-        "创新创业"
-      ],
-      "organizer": "教育部 + 商务部",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部",
       "location": {
         "province": "",
         "city": "",
@@ -581,13 +593,15 @@
       },
       "description": "教育部、商务部联合主办的服创类赛事，企业命题赛道对商科、管理、计算机交叉背景友好。[预计] 报名通常年底截止，全国总决赛次年5月。",
       "officialUrl": "http://www.fwwb.org.cn",
-      "source": "商科文科爬虫·保底清单",
+      "source": "教育部白名单(84项) + 商科文科爬虫·保底清单",
       "sourceVerified": true,
+      "whitelistRank": 24,
+      "confidence": "high",
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "报名中"
+      "status": "待更新"
     },
     {
       "id": "全国大学生电子设计竞赛",
@@ -609,15 +623,16 @@
         "competitionDate": null,
         "resultDate": null
       },
-      "description": "教育部高等教育司主办，两年一届，奇数年举办",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 6 项）。",
       "officialUrl": "http://www.nuedc.com.cn",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Advanced",
       "prize": "",
       "region": "regional",
-      "status": "偶数年"
+      "status": "偶数年",
+      "confidence": "high"
     },
     {
       "id": "全国大学生机械创新设计大赛",
@@ -639,15 +654,16 @@
         "competitionDate": null,
         "resultDate": null
       },
-      "description": "教育部机械基础课程教学指导委员会主办",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 8 项）。",
       "officialUrl": "https://www.mechinnovation.cn/",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "偶数年"
+      "status": "偶数年",
+      "confidence": "high"
     },
     {
       "id": "全国大学生工程训练综合能力竞赛",
@@ -669,15 +685,1996 @@
         "competitionDate": null,
         "resultDate": null
       },
-      "description": "教育部高等教育司主办，工程实践类竞赛",
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 13 项）。",
       "officialUrl": "http://www.gcxl.edu.cn",
-      "source": "教育部白名单",
+      "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-07-12",
       "difficulty": "Intermediate",
       "prize": "",
       "region": "national",
-      "status": "奇数年"
+      "status": "奇数年",
+      "confidence": "high"
+    },
+    {
+      "id": "中国国际-互联网-大学生创新创业大赛",
+      "name": "中国国际“互联网+”大学生创新创业大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部等 12 部委",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 1 项）。",
+      "officialUrl": "https://cy.ncss.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 1,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国大学生医学技术技能大赛",
+      "name": "中国大学生医学技术技能大赛",
+      "category": "技能类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 7 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 7,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生结构设计竞赛",
+      "name": "全国大学生结构设计竞赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 9 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 9,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生智能汽车竞赛",
+      "name": "全国大学生智能汽车竞赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "教育部高等学校自动化类教指委",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 11 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 11,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生物流设计大赛",
+      "name": "全国大学生物流设计大赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "教育部物流类教指委",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 14 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 14,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "外研社全国大学生英语系列赛",
+      "name": "外研社全国大学生英语系列赛",
+      "category": "外语类",
+      "subcategory": [],
+      "organizer": "外语教学与研究出版社",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 15 项）。",
+      "officialUrl": "https://uchallenge.unipus.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 15,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "两岸新锐设计竞赛-华灿奖",
+      "name": "两岸新锐设计竞赛·华灿奖",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "中国高等教育学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 16 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 16,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生创新创业训练计划年会展示",
+      "name": "全国大学生创新创业训练计划年会展示",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 17 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 17,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生机器人大赛",
+      "name": "全国大学生机器人大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "共青团中央等",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 19 项）。",
+      "officialUrl": "https://www.robomaster.com",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 19,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生先进成图技术与产品信息建模创新大赛",
+      "name": "全国大学生先进成图技术与产品信息建模创新大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 21 项）。",
+      "officialUrl": "https://cy.ncss.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 21,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国三维数字化创新设计大赛",
+      "name": "全国三维数字化创新设计大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "全国三维数字化创新设计大赛组委会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 22 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 22,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国高校计算机大赛",
+      "name": "中国高校计算机大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "教育部大学计算机课程教指委",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 26 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 26,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "米兰设计周-中国高校设计学科师生优秀作品展",
+      "name": "米兰设计周——中国高校设计学科师生优秀作品展",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "中国教育国际交流协会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 28 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 28,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生地质技能竞赛",
+      "name": "全国大学生地质技能竞赛",
+      "category": "技能类",
+      "subcategory": [],
+      "organizer": "中国地质学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 29 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 29,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生集成电路创新创业大赛",
+      "name": "全国大学生集成电路创新创业大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "工业和信息化部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 31 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 31,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生金相技能大赛",
+      "name": "全国大学生金相技能大赛",
+      "category": "技能类",
+      "subcategory": [],
+      "organizer": "教育部材料类教指委",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 32 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 32,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "未来设计师-全国高校数字艺术设计大赛",
+      "name": "未来设计师·全国高校数字艺术设计大赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "工业和信息化部人才交流中心",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 34 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 34,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国周培源大学生力学竞赛",
+      "name": "全国周培源大学生力学竞赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "中国力学学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 35 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 35,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国大学生机械工程创新创意大赛",
+      "name": "中国大学生机械工程创新创意大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "中国机械工程学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 36 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 36,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国机器人大赛暨robocup机器人世界杯中国赛",
+      "name": "中国机器人大赛暨RoboCup机器人世界杯中国赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "中国自动化学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 37 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 37,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国软件杯-大学生软件设计大赛",
+      "name": "“中国软件杯”大学生软件设计大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "工业和信息化部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 38 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 38,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中美青年创客大赛",
+      "name": "中美青年创客大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 39 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 39,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "睿抗机器人开发者大赛-raicom",
+      "name": "睿抗机器人开发者大赛(RAICOM)",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "工业和信息化部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 40 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 40,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "大唐杯-全国大学生新一代信息通信技术大赛",
+      "name": "“大唐杯”全国大学生新一代信息通信技术大赛",
+      "category": "电子信息类",
+      "subcategory": [],
+      "organizer": "工业和信息化部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 41 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 41,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "华为ict大赛",
+      "name": "华为ICT大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "华为技术有限公司",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 42 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 42,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生嵌入式芯片与系统设计竞赛",
+      "name": "全国大学生嵌入式芯片与系统设计竞赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "中国电子学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 43 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 43,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生生命科学竞赛-culsc",
+      "name": "全国大学生生命科学竞赛(CULSC)",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "全国大学生生命科学竞赛委员会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 44 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 44,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生物理实验竞赛",
+      "name": "全国大学生物理实验竞赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 45 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 45,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国高校bim毕业设计创新大赛",
+      "name": "全国高校BIM毕业设计创新大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "中国土木工程学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 46 项）。",
+      "officialUrl": "https://cy.ncss.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 46,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国高校商业精英挑战赛",
+      "name": "全国高校商业精英挑战赛",
+      "category": "商科类",
+      "subcategory": [],
+      "organizer": "中国国际贸易促进委员会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 47 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 47,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "学创杯-全国大学生创业综合模拟大赛",
+      "name": "“学创杯”全国大学生创业综合模拟大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "高等学校国家级实验教学示范中心",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 48 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 48,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国高校智能机器人创意大赛",
+      "name": "中国高校智能机器人创意大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "中国高等教育学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 49 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 49,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国好创意暨全国数字艺术设计大赛",
+      "name": "中国好创意暨全国数字艺术设计大赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "全国高等院校计算机基础教育研究会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 50 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 50,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中国机器人及人工智能大赛",
+      "name": "中国机器人及人工智能大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "中国人工智能学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 51 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 51,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生节能减排社会实践与科技竞赛",
+      "name": "全国大学生节能减排社会实践与科技竞赛",
+      "category": "科技类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 52 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 52,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "21世纪杯-全国英语演讲比赛",
+      "name": "“21世纪杯”全国英语演讲比赛",
+      "category": "外语类",
+      "subcategory": [],
+      "organizer": "中国日报社",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 53 项）。",
+      "officialUrl": "https://uchallenge.unipus.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 53,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "ican大学生创新创业大赛",
+      "name": "iCAN大学生创新创业大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "北京大学",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 54 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 54,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "中华经典诵写讲大赛",
+      "name": "中华经典诵写讲大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 56 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 56,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "外教社杯-全国高校学生跨文化能力大赛",
+      "name": "“外教社杯”全国高校学生跨文化能力大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "上海外语教育出版社",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 57 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 57,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "百度之星程序设计大赛",
+      "name": "百度之星程序设计大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "百度公司",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 58 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 58,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Advanced",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生工业设计大赛",
+      "name": "全国大学生工业设计大赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 59 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 59,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生水利创新设计大赛",
+      "name": "全国大学生水利创新设计大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 60 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 60,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生化工实验大赛",
+      "name": "全国大学生化工实验大赛",
+      "category": "化工类",
+      "subcategory": [],
+      "organizer": "中国化工教育协会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 61 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 61,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生化学实验创新设计大赛",
+      "name": "全国大学生化学实验创新设计大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "高等学校国家级实验教学示范中心",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 62 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 62,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生计算机系统能力大赛",
+      "name": "全国大学生计算机系统能力大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "全国高校计算机教育研究会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 63 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 63,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生花园设计建造竞赛",
+      "name": "全国大学生花园设计建造竞赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "中国风景园林学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 64 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 64,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生物联网设计竞赛",
+      "name": "全国大学生物联网设计竞赛",
+      "category": "设计类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 65 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 65,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生信息安全与对抗技术竞赛",
+      "name": "全国大学生信息安全与对抗技术竞赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "中国兵工学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 66 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 66,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生测绘学科创新创业智能大赛",
+      "name": "全国大学生测绘学科创新创业智能大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 67 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 67,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生统计建模大赛",
+      "name": "全国大学生统计建模大赛",
+      "category": "商科类",
+      "subcategory": [],
+      "organizer": "国家统计局",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 68 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 68,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生能源经济学术创意大赛",
+      "name": "全国大学生能源经济学术创意大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "中国优选法统筹法与经济数学研究会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 69 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 69,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生基础医学创新研究暨实验设计论坛",
+      "name": "全国大学生基础医学创新研究暨实验设计论坛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 70 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 70,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生数字媒体科技作品及创意竞赛",
+      "name": "全国大学生数字媒体科技作品及创意竞赛",
+      "category": "科技类",
+      "subcategory": [],
+      "organizer": "中国人工智能学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 71 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 71,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国本科院校税收风险管控赛例大赛",
+      "name": "全国本科院校税收风险管控赛例大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "中国商业会计学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 72 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 72,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国企业模拟竞赛大赛",
+      "name": "全国企业模拟竞赛大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "中国商业联合会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 73 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 73,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国高等院校数智化企业经营沙盘大赛",
+      "name": "全国高等院校数智化企业经营沙盘大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "新道科技股份有限公司",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 74 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 74,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国数字建筑创新应用大赛",
+      "name": "全国数字建筑创新应用大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "中国建筑科学研究院",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 75 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 75,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全球校园人工智能算法精英大赛",
+      "name": "全球校园人工智能算法精英大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "江苏省人工智能学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 76 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 76,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Advanced",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "国际大学生智能农业装备创新大赛",
+      "name": "国际大学生智能农业装备创新大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "中国农业机械学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 77 项）。",
+      "officialUrl": "https://cy.ncss.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 77,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "科云杯-全国大学生财会职业能力大赛",
+      "name": "“科云杯”全国大学生财会职业能力大赛",
+      "category": "其他",
+      "subcategory": [],
+      "organizer": "中国商业会计学会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 78 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 78,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国职业院校技能大赛",
+      "name": "全国职业院校技能大赛",
+      "category": "技能类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 79 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 79,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "全国大学生机器人大秦-robotac",
+      "name": "全国大学生机器人大秦-RoboTac",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "教育部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 80 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 80,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "世界技能大赛",
+      "name": "世界技能大赛",
+      "category": "技能类",
+      "subcategory": [],
+      "organizer": "世界技能组织",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 81 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 81,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "世界技能大赛中国选拔赛",
+      "name": "世界技能大赛中国选拔赛",
+      "category": "技能类",
+      "subcategory": [],
+      "organizer": "人力资源社会保障部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 82 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 82,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "一带一路暨金砖国家技能发展与技术创新大赛",
+      "name": "一带一路暨金砖国家技能发展与技术创新大赛",
+      "category": "创新创业类",
+      "subcategory": [],
+      "organizer": "金砖国家工商理事会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 83 项）。",
+      "officialUrl": "https://cy.ncss.cn",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 83,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
+    },
+    {
+      "id": "码蹄杯全国职业院校程序设计大赛",
+      "name": "码蹄杯全国职业院校程序设计大赛",
+      "category": "计算机类",
+      "subcategory": [],
+      "organizer": "全国高等学校计算机教育研究会",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": null,
+        "submissionDeadline": null,
+        "competitionDate": null,
+        "resultDate": null
+      },
+      "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 84 项）。",
+      "officialUrl": "",
+      "source": "教育部白名单(84项)",
+      "sourceVerified": true,
+      "whitelistRank": 84,
+      "confidence": "high",
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Advanced",
+      "prize": "",
+      "region": "national",
+      "status": "待更新"
     }
   ]
 }
