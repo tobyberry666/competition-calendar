@@ -38,30 +38,78 @@
     ];
 
     // ── Init ──
+    let dataLoaded = false;
+
     document.addEventListener('DOMContentLoaded', () => {
-        loadData();
-        window.addEventListener('hashchange', route);
-        route();
+        // 先同步渲染加载态，避免首屏闪现“竞赛总数 0”
+        renderLoading();
+        window.addEventListener('hashchange', onHashChange);
+        loadData().then(ok => {
+            dataLoaded = true;
+            if (ok) route();   // 失败已渲染错误屏，不再覆盖
+        });
     });
+
+    // 数据未就绪时忽略导航，等首屏渲染完成后再响应（避免再次闪空屏）
+    function onHashChange() {
+        if (!dataLoaded) return;
+        route();
+    }
 
     async function loadData() {
         try {
-            const res = await fetch('data.json?t=' + Date.now());
+            const res = await fetch('data.json?v=' + Date.now());
+            if (!res.ok) throw new Error('HTTP ' + res.status);
             const data = await res.json();
             allCompetitions = data.competitions || data || [];
+            if (!Array.isArray(allCompetitions)) allCompetitions = [];
             // Normalize: ensure array of objects with required fields
-            if (Array.isArray(allCompetitions)) {
-                allCompetitions = allCompetitions.map(c => ({
-                    ...c,
-                    subcategory: c.subcategory || [],
-                    timeline: c.timeline || {},
-                    location: c.location || {}
-                }));
-            }
+            allCompetitions = allCompetitions.map(c => ({
+                ...c,
+                subcategory: c.subcategory || [],
+                timeline: c.timeline || {},
+                location: c.location || {}
+            }));
+            return true;
         } catch (e) {
             console.error('Failed to load data:', e);
             allCompetitions = [];
+            renderError(e);
+            return false;
         }
+    }
+
+    function retryLoad() {
+        renderLoading();
+        loadData().then(ok => {
+            dataLoaded = true;
+            if (ok) route();
+        });
+    }
+
+    function renderLoading() {
+        const app = document.getElementById('app');
+        if (app) {
+            app.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <div class="loading-text">正在加载竞赛数据…</div>
+                </div>`;
+        }
+    }
+
+    function renderError(err) {
+        const app = document.getElementById('app');
+        if (!app) return;
+        app.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-state-icon">⚠️</div>
+                <div class="empty-state-text">
+                    竞赛数据加载失败${err ? '（' + esc(String(err.message || err)) + '）' : ''}<br>
+                    请检查网络后重试
+                </div>
+                <button class="btn btn-primary" style="margin-top:16px;" onclick="window._retryLoad()">🔄 重新加载</button>
+            </div>`;
     }
 
     // ── Routing ──
@@ -490,6 +538,7 @@
         </div>`;
     }
 
-    // ── Global toggle favorite ──
+    // ── Global handlers ──
     window._toggleFav = toggleFavorite;
+    window._retryLoad = retryLoad;
 })();
