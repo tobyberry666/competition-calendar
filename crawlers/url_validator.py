@@ -35,6 +35,9 @@ KNOWN_DOMAINS = {
     "工行杯": ["gonghangbei.com"],
     "广告": ["sun-ada.net"],
     "大广赛": ["sun-ada.net"],
+    "外研社": ["uchallenge.unipus.cn"],
+    "英语演讲": ["uchallenge.unipus.cn"],
+    "机械创新": ["mechinnovation.cn"],
 }
 
 

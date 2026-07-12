@@ -7,6 +7,9 @@ from .dorahacks import crawl_dorahacks
 from .devpost import crawl_devpost
 from .business_liberal_arts import crawl_business_liberal
 from .seed_data import get_seed_competitions
+from .whitelist_84 import get_whitelist_competitions
+from .official_site_crawler import crawl_official_deadlines
+from .dedup import merge_and_dedupe
 from .url_validator import validate_and_discover_urls
 
 __all__ = [
@@ -19,5 +22,8 @@ __all__ = [
     "crawl_devpost",
     "crawl_business_liberal",
     "get_seed_competitions",
+    "get_whitelist_competitions",
+    "crawl_official_deadlines",
+    "merge_and_dedupe",
     "validate_and_discover_urls",
 ]

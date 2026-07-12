@@ -241,6 +241,12 @@
         if (comp.category) tags.push(`<span class="tag tag-category">${esc(comp.category)}</span>`);
         if (comp.difficulty) tags.push(`<span class="tag tag-difficulty-${comp.difficulty}">${esc(comp.difficulty)}</span>`);
         (comp.subcategory || []).forEach(s => tags.push(`<span class="tag tag-sub">${esc(s)}</span>`));
+        // 置信度标识：官方白名单(high)不标；聚合匹配/待核实才显式提示
+        const conf = comp.confidence || (comp.sourceVerified ? 'high' : 'medium');
+        if (conf !== 'high') {
+            const confLabel = conf === 'low' ? '待核实' : '聚合匹配';
+            tags.push(`<span class="tag tag-confidence">${confLabel}</span>`);
+        }
 
         let countdownHtml = '';
         if (cd) {
