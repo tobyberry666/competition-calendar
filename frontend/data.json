@@ -1,13 +1,14 @@
 {
-  "updated_at": "2026-07-12 03:37:05",
-  "total": 17,
+  "updated_at": "2026-07-12 03:59:40",
+  "total": 22,
   "categories": {
-    "外语类": 1,
+    "外语类": 2,
     "计算机类": 4,
-    "商科类": 2,
+    "商科类": 5,
     "创新创业类": 2,
     "电子信息类": 3,
     "化工类": 1,
+    "设计类": 1,
     "数学类": 2,
     "机械类": 2
   },
@@ -343,6 +344,37 @@
       "status": "已截止"
     },
     {
+      "id": "全国大学生广告艺术大赛",
+      "name": "全国大学生广告艺术大赛（大广赛）",
+      "category": "设计类",
+      "subcategory": [
+        "广告",
+        "大广赛"
+      ],
+      "organizer": "教育部高等教育司",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": "2026-06-30",
+        "submissionDeadline": null,
+        "competitionDate": "2026-08-15",
+        "resultDate": null
+      },
+      "description": "教育部认可的全国大学生广告艺术大赛，覆盖平面、视频、动画、文案、营销策划等赛道，设计/传媒/文科生核心赛事。[预计] 2026年第16届全国总评审预计7-8月，报名通常6月底前截止。",
+      "officialUrl": "http://www.sun-ada.net",
+      "source": "商科文科爬虫·保底清单",
+      "sourceVerified": true,
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "进行中"
+    },
+    {
       "id": "全国大学生数学建模竞赛",
       "name": "全国大学生数学建模竞赛",
       "category": "数学类",
@@ -404,6 +436,37 @@
       "status": "报名中"
     },
     {
+      "id": "工行杯全国大学生金融科技创新大赛",
+      "name": "工行杯（全国大学生金融科技创新大赛）",
+      "category": "商科类",
+      "subcategory": [
+        "金融科技",
+        "工行杯"
+      ],
+      "organizer": "中国工商银行",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": "2026-05-27",
+        "registrationDeadline": "2026-09-30",
+        "submissionDeadline": null,
+        "competitionDate": "2026-12-26",
+        "resultDate": null
+      },
+      "description": "中国工商银行主办的第17届全国大学生金融科技创新大赛，主题「数智银行·创见未来」，设科技金融、绿色金融、普惠金融等十大方向。报名2026年5月—9月，官网报名截止9月30日（部分校赛渠道提示9月1日，以官网 gonghangbei.com 为准）；省赛10月、全国总决赛12月。特等奖2万元/组并提供工行实习机会。",
+      "officialUrl": "https://www.gonghangbei.com",
+      "source": "商科文科爬虫·保底清单",
+      "sourceVerified": true,
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "特等奖2万元/组 + 工行实习",
+      "region": "national",
+      "status": "报名中"
+    },
+    {
       "id": "全国大学生数学竞赛",
       "name": "全国大学生数学竞赛",
       "category": "数学类",
@@ -432,6 +495,99 @@
       "prize": "",
       "region": "regional",
       "status": "即将开始"
+    },
+    {
+      "id": "外研社国才杯全国英语演讲大赛",
+      "name": "外研社·国才杯 全国英语演讲大赛",
+      "category": "外语类",
+      "subcategory": [
+        "英语",
+        "演讲"
+      ],
+      "organizer": "外语教学与研究出版社",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": "2026-10-15",
+        "submissionDeadline": null,
+        "competitionDate": "2026-12-15",
+        "resultDate": null
+      },
+      "description": "外语教学与研究出版社主办的「外研社·国才杯·合智杯」系列赛事中的英语演讲赛道，外语类最热门竞赛之一。[预计] 校赛/省赛秋季进行，全国总决赛12月。",
+      "officialUrl": "https://uchallenge.unipus.cn",
+      "source": "商科文科爬虫·保底清单",
+      "sourceVerified": true,
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "未开始"
+    },
+    {
+      "id": "正大杯全国大学生市场调查与分析大赛",
+      "name": "正大杯（全国大学生市场调查与分析大赛）",
+      "category": "商科类",
+      "subcategory": [
+        "市场调查",
+        "正大杯"
+      ],
+      "organizer": "中国商业统计学会（正大集团冠名）",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": "2026-10-25",
+        "registrationDeadline": "2026-11-20",
+        "submissionDeadline": null,
+        "competitionDate": "2027-05-25",
+        "resultDate": null
+      },
+      "description": "中国商业统计学会主办、正大集团冠名的全国性大学生市场调查类赛事，文科/商科生热门选择。[预计] 第17届（2026-2027学年）预计2026年10月启动报名，省赛次年4月、全国总决赛次年5月；具体日期以官网 china-cssc.org 通知为准。第16届已于2026年5月结束。",
+      "officialUrl": "https://www.china-cssc.org/list-550-1.html",
+      "source": "商科文科爬虫·保底清单",
+      "sourceVerified": true,
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Beginner",
+      "prize": "",
+      "region": "national",
+      "status": "未开始"
+    },
+    {
+      "id": "中国大学生服务外包创新创业大赛",
+      "name": "中国大学生服务外包创新创业大赛",
+      "category": "商科类",
+      "subcategory": [
+        "服务外包",
+        "创新创业"
+      ],
+      "organizer": "教育部 + 商务部",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国"
+      },
+      "timeline": {
+        "registrationStart": null,
+        "registrationDeadline": "2026-12-31",
+        "submissionDeadline": null,
+        "competitionDate": "2027-05-15",
+        "resultDate": null
+      },
+      "description": "教育部、商务部联合主办的服创类赛事，企业命题赛道对商科、管理、计算机交叉背景友好。[预计] 报名通常年底截止，全国总决赛次年5月。",
+      "officialUrl": "http://www.fwwb.org.cn",
+      "source": "商科文科爬虫·保底清单",
+      "sourceVerified": true,
+      "lastUpdated": "2026-07-12",
+      "difficulty": "Intermediate",
+      "prize": "",
+      "region": "national",
+      "status": "报名中"
     },
     {
       "id": "全国大学生电子设计竞赛",
