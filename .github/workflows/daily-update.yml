@@ -16,17 +16,25 @@ on:
       - "frontend/**"
       - ".github/workflows/**"
 
+# 单 job 同时负责「采集数据」与「部署 Pages」，
+# 确保 deploy-pages 上传的就是本工作区刚生成的 frontend（含最新数据），
+# 而不是触发时的旧 commit（双 job 架构下 deploy 会 checkout 旧 SHA 导致数据不更新）。
 permissions:
   contents: write
   pages: write
   id-token: write
 
 jobs:
-  crawl-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: 设置 Python 环境
         uses: actions/setup-python@v5
@@ -40,18 +48,17 @@ jobs:
 
       - name: 运行爬虫采集数据
         run: python main.py
-        continue-on-error: false
 
-      - name: 校验数据文件存在
+      - name: 校验数据条数
         run: |
           if [ ! -f "frontend/data.json" ]; then
             echo "❌ 数据文件不存在！"
             exit 1
           fi
-          echo "✅ 数据文件存在"
-          wc -l frontend/data.json
+          echo "✅ 数据文件存在, 当前条数:"
+          grep -c '"name"' frontend/data.json
 
-      - name: 提交更新的数据
+      - name: 提交更新的数据回仓库
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -63,38 +70,14 @@ jobs:
             git push || true
           fi
 
-  deploy:
-    needs: crawl-and-deploy
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: 检出代码
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
       - name: 设置 Pages
         uses: actions/configure-pages@v4
 
-      - name: 上传前端 artifact (GitHub Actions 部署源)
+      - name: 上传前端 artifact（使用本工作区刚生成的 frontend）
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./frontend
 
-      - name: 部署到 GitHub Pages (Actions 部署源)
+      - name: 部署到 GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: 同步 frontend 到 gh-pages 分支 (branch 部署源)
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git subtree push --prefix=frontend origin gh-pages || \
-          git push origin "$(git subtree split --prefix=frontend HEAD)":gh-pages --force
