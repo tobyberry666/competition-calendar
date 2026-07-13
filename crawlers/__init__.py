@@ -9,6 +9,7 @@ from .business_liberal_arts import crawl_business_liberal
 from .seed_data import get_seed_competitions
 from .whitelist_84 import get_whitelist_competitions
 from .official_site_crawler import crawl_official_deadlines
+from .young_ai_conference import crawl_young_ai_conference
 from .dedup import merge_and_dedupe
 from .url_validator import validate_and_discover_urls
 
@@ -24,6 +25,7 @@ __all__ = [
     "get_seed_competitions",
     "get_whitelist_competitions",
     "crawl_official_deadlines",
+    "crawl_young_ai_conference",
     "merge_and_dedupe",
     "validate_and_discover_urls",
 ]

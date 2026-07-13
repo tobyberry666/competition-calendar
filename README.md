@@ -38,6 +38,7 @@ competition-calendar/
 │   ├── dorahacks.py          # DoraHacks 黑客松
 │   ├── devpost.py            # Devpost 黑客松
 │   ├── business_liberal_arts.py  # 商科/文科专项爬虫（保底工行杯、正大杯等稳定进库）
+│   ├── young_ai_conference.py  # 年轻AI线下大会（官网直采：Google Vibe-a-thon/小米黑客松/TRAE/CODING LADY/TapNow）
 │   ├── seed_data.py          # 教育部白名单手写补充种子
 │   ├── categories.py         # 统一竞赛分类映射（计算机/商科/外语/数学/设计…）
 │   ├── retry.py              # 请求重试
@@ -104,6 +105,7 @@ Windows 用户直接双击 `启动预览.bat` 即可。
 | DoraHacks | 全球黑客松活动 | 公开 API | ⭐⭐⭐ |
 | Devpost | 全球黑客松活动 | 公开 API | ⭐⭐⭐ |
 | 商科/文科专项 | 工行杯、正大杯·市调、大广赛、外研社杯等（保底清单 + 实时补充） | 保底清单 + 网页爬虫 | ⭐⭐⭐⭐⭐ |
+| 年轻AI线下大会 | Google Vibe-a-thon / 小米黑客松 / TRAE AI创造力 / CODING LADY女性黑客松 / TapNow全球AI影视（官网直采 + 核实日期兜底） | 官网直采爬虫 | ⭐⭐⭐⭐ |
 
 ## 🔧 添加新的数据源
 
