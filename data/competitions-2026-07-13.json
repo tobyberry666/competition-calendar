@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-13 15:24:50",
-  "total": 93,
+  "updated_at": "2026-07-13 15:44:13",
+  "total": 94,
   "categories": {
     "外语类": 4,
     "计算机类": 16,
@@ -8,8 +8,8 @@
     "创新创业类": 21,
     "电子信息类": 4,
     "化工类": 2,
+    "年轻AI线下大会": 6,
     "设计类": 11,
-    "年轻AI线下大会": 5,
     "数学类": 2,
     "机械类": 2,
     "技能类": 6,
@@ -356,6 +356,39 @@
       "prize": "",
       "region": "national",
       "status": "已截止"
+    },
+    {
+      "id": "ai创变者计划2026黑客松联赛",
+      "name": "AI创变者计划2026黑客松联赛",
+      "category": "年轻AI线下大会",
+      "subcategory": [
+        "黑客松",
+        "AI应用创新",
+        "智能体"
+      ],
+      "organizer": "抖音集团（北京抖音科技有限公司）",
+      "location": {
+        "province": "",
+        "city": "",
+        "display": "全国多站 + 五大区复赛 + 全国总决赛"
+      },
+      "timeline": {
+        "registrationStart": "2026-04-13",
+        "registrationDeadline": "2026-06-20",
+        "submissionDeadline": null,
+        "competitionDate": "2026-08-01",
+        "resultDate": null
+      },
+      "description": "抖音 AI 创变者计划 2026 黑客松联赛，面向全国高校全日制在校学生的 AI 黑客松赛事，围绕 AI 创作、AI 应用创新、智能体 / AI 产品落地三大方向。赛程含校园/城市交流赛、五大区复赛、全国总决赛暨 AI 嘉年华；官网 aiia.douyin.com 为唯一正式参赛入口。",
+      "officialUrl": "https://aiia.douyin.com/",
+      "source": "年轻AI线下大会·官网爬虫",
+      "sourceVerified": true,
+      "lastUpdated": "2026-07-13",
+      "difficulty": "Intermediate",
+      "prize": "全国总决赛设 100 万元总奖池，单支团队最高 10 万元；字节导师 1v1、抖音校招/实习直通、5 天 4 晚 AI 嘉年华",
+      "region": "national",
+      "status": "已截止",
+      "confidence": "high"
     },
     {
       "id": "中国国际大学生创新大赛",

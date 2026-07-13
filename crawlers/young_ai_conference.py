@@ -1,6 +1,6 @@
 """
 年轻AI线下大会 - 官网直采爬虫
-针对 5 个面向青年的 AI 线下 / 创作大赛，逐个抓取官网，复用 official_site_crawler.extract_timeline
+针对若干面向青年的 AI 线下 / 创作大赛，逐个抓取官网，复用 official_site_crawler.extract_timeline
 结构化提取「报名截止 / 比赛日期」。
 设计原则（与项目一致）：
 - 官网能抓到日期 → 用实时的；
@@ -103,6 +103,28 @@ COMPETITIONS = [
             "registrationDeadline": "2026-07-17",
             "submissionDeadline": None,
             "competitionDate": "2026-07-26",
+            "resultDate": None,
+        },
+    },
+    {
+        "name": "AI创变者计划2026黑客松联赛",
+        "officialUrl": "https://aiia.douyin.com/",
+        "organizer": "抖音集团（北京抖音科技有限公司）",
+        "location": {"province": "", "city": "", "display": "全国多站 + 五大区复赛 + 全国总决赛"},
+        "subcategory": ["黑客松", "AI应用创新", "智能体"],
+        "difficulty": "Intermediate",
+        "prize": "全国总决赛设 100 万元总奖池，单支团队最高 10 万元；字节导师 1v1、抖音校招/实习直通、5 天 4 晚 AI 嘉年华",
+        "region": "national",
+        "description": (
+            "抖音 AI 创变者计划 2026 黑客松联赛，面向全国高校全日制在校学生的 AI 黑客松赛事，"
+            "围绕 AI 创作、AI 应用创新、智能体 / AI 产品落地三大方向。赛程含校园/城市交流赛、五大区复赛、"
+            "全国总决赛暨 AI 嘉年华；官网 aiia.douyin.com 为唯一正式参赛入口。"
+        ),
+        "timeline": {
+            "registrationStart": "2026-04-13",
+            "registrationDeadline": "2026-06-20",
+            "submissionDeadline": None,
+            "competitionDate": "2026-08-01",
             "resultDate": None,
         },
     },
