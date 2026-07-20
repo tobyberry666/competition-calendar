@@ -103,7 +103,11 @@ def merge_and_dedupe(all_lists):
             if not key:
                 key = "___" + comp.get("name", str(id(comp)))
             if key in buckets:
-                buckets[key] = _overlay(buckets[key], comp)
+                current = buckets[key]
+                if _score(comp) > _score(current):
+                    buckets[key] = _overlay(comp, current)
+                else:
+                    buckets[key] = _overlay(current, comp)
             else:
                 buckets[key] = comp
                 order.append(key)
