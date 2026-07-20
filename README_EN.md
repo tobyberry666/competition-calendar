@@ -16,11 +16,9 @@ Competition notices are spread across official sites, aggregators, and event pla
 
 - Deadline-ordered listings, keyword search, and category filters.
 - Competition timelines, sources, confidence labels, and official links, plus browser-local favorites.
-- Responsive desktop and mobile layouts. The deployed site was observed to show 88 competitions on 2026-07-20; this is a dated observation, not a permanent total, because daily updates can change the data.
+- The deployed site was observed to show 88 competitions on 2026-07-20; this is a dated observation, not a permanent total, because daily updates can change the data.
 
 ![Filtered calendar](docs/images/calendar-filtered.png)
-
-![Mobile calendar](docs/images/mobile-calendar.png)
 
 ## Data pipeline
 
@@ -57,14 +55,15 @@ GitHub Actions runs collection and unit tests every day at 07:00 China Standard 
 
 ## Data sources and accuracy
 
-Inputs include the Ministry of Education whitelist seed data, competition aggregators, event platforms, and specialist sources. Dates and URLs are validated, but the data is reference-only: eligibility, schedules, rules, and links are governed by the latest information on the official competition site.
+Inputs include the Ministry of Education whitelist seed data, competition aggregators, event platforms, and specialist sources. Year and date-format validation applies only when enriching whitelist records from official sites. URL validation checks reachability only; it does not prove ownership or authority. The data is reference-only: eligibility, schedules, rules, and links are governed by the latest information on the official competition site.
 
 ## Add a data source
 
 1. Create a crawler module in `crawlers/` that returns a list of competition records.
-2. Include the fields that are available, such as name, source, category, timeline, and `officialUrl`.
-3. Import and schedule the crawler in `main.py`; add category keywords in `crawlers/categories.py` when needed.
-4. Run the tests and collection flow, then inspect the generated `frontend/data.json`.
+2. Import `make_id` from `crawlers.seed_data` and set `id: make_id(name)` for every record. This stable ID drives detail routes and browser-local favorites.
+3. Include the fields that are available, such as name, source, category, timeline, and `officialUrl`.
+4. Import and schedule the crawler in `main.py`; add category keywords in `crawlers/categories.py` when needed.
+5. Run the tests and collection flow, then inspect the generated `frontend/data.json`.
 
 ## License
 
