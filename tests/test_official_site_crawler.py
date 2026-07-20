@@ -2,7 +2,9 @@ import sys
 import types
 import unittest
 
-if "bs4" not in sys.modules:
+try:
+    import bs4
+except ModuleNotFoundError:
     bs4 = types.ModuleType("bs4")
     bs4.BeautifulSoup = object
     sys.modules["bs4"] = bs4
