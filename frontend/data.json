@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 00:21:47",
+  "updated_at": "2026-08-05 00:14:10",
   "total": 88,
   "categories": {
     "外语类": 4,
@@ -161,7 +161,7 @@
         "resultDate": null
       },
       "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 25 项）。",
-      "officialUrl": "https://jsjds.blcu.edu.cn/",
+      "officialUrl": "https://jsjds.blcu.edu.cn",
       "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-08-04",
@@ -624,7 +624,7 @@
         "resultDate": null
       },
       "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 6 项）。",
-      "officialUrl": "http://www.nuedc.com.cn",
+      "officialUrl": "http://nuedc.com.cn",
       "source": "教育部白名单 + 教育部白名单(84项)",
       "sourceVerified": true,
       "lastUpdated": "2026-08-04",
@@ -985,7 +985,7 @@
         "resultDate": null
       },
       "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 21 项）。",
-      "officialUrl": "",
+      "officialUrl": "https://cy.ncss.cn",
       "source": "教育部白名单(84项)",
       "sourceVerified": true,
       "whitelistRank": 21,
@@ -1555,7 +1555,7 @@
         "resultDate": null
       },
       "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 46 项）。",
-      "officialUrl": "",
+      "officialUrl": "https://cy.ncss.cn",
       "source": "教育部白名单(84项)",
       "sourceVerified": true,
       "whitelistRank": 46,
@@ -2455,7 +2455,7 @@
         "resultDate": null
       },
       "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 77 项）。",
-      "officialUrl": "",
+      "officialUrl": "https://cy.ncss.cn",
       "source": "教育部白名单(84项)",
       "sourceVerified": true,
       "whitelistRank": 77,
@@ -2635,7 +2635,7 @@
         "resultDate": null
       },
       "description": "教育部《2023 全国普通高校大学生竞赛分析报告》认可赛事（白名单第 83 项）。",
-      "officialUrl": "",
+      "officialUrl": "https://cy.ncss.cn",
       "source": "教育部白名单(84项)",
       "sourceVerified": true,
       "whitelistRank": 83,
